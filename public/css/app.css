@@ -1,0 +1,401 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,400,700);
+*:focus {
+  outline: 0; }
+
+button {
+  outline: 0; }
+
+body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden; }
+
+body, p, h1, h2, h3, a {
+  font-family: "Montserrat", sans-serif; }
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; }
+
+a, a:visited, a:hover {
+  transition: .3s all ease;
+  text-decoration: none; }
+
+h2 {
+  font-size: 700;
+  margin: 0;
+  padding: 0; }
+
+.mynav {
+  position: absolute;
+  width: 100%;
+  height: 81px;
+  background-color: #F1C40F; }
+
+.homeMenu {
+  display: none; }
+
+.homeMenu .show {
+  display: block;
+  margin-top: 81px; }
+
+.hamburger {
+  float: right;
+  margin-top: 20px;
+  margin-right: 20px;
+  background-color: transparent;
+  outline: 0;
+  background: none;
+  border: 0; }
+  .hamburger .iconBar {
+    background-color: #3398DA;
+    width: 30px;
+    margin-bottom: 5px;
+    color: #3398DA;
+    height: 3px;
+    display: block; }
+
+#frontpage {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 100%;
+  height: 100%;
+  min-height: 100vh;
+  -webkit-flex-flow: column wrap;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+  background-color: #F1C40F;
+  width: 100%; }
+
+.logo {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: -100px; }
+
+.logoimage {
+  width: 100%; }
+
+.logoName {
+  width: auto; }
+  .logoName h1 {
+    display: inline-block;
+    color: #3398DA;
+    font-size: 3.5em;
+    border-bottom: 2px #3398DA solid;
+    font-weight: 700;
+    letter-spacing: -0.1em; }
+  .logoName h2 {
+    color: #3398DA;
+    font-weight: 100;
+    font-size: 1em; }
+
+.searchForm {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding-bottom: 10px; }
+
+.locationSearch {
+  margin: 0 auto;
+  width: 200px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: white;
+  color: #3398DA;
+  border: solid 2px #3398DA;
+  position: relative;
+  display: block;
+  text-transform: uppercase;
+  text-align: center; }
+
+.categorySelector {
+  margin: 0 auto;
+  width: 200px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: white;
+  color: #3398DA;
+  border: solid 2px #3398DA;
+  border-top: none;
+  position: relative;
+  display: block;
+  text-transform: uppercase;
+  text-align: center; }
+
+.categorySelector .hide {
+  display: none; }
+
+#fakeSelect {
+  margin: 0 auto;
+  width: 200px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: white;
+  color: #3398DA;
+  border: solid 2px #3398DA;
+  position: relative;
+  display: block;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  cursor: pointer; }
+  #fakeSelect #fakeSelectText {
+    margin-right: 20px; }
+
+.arrow {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  color: #F1C40F;
+  background-color: #3398DA;
+  right: 0px;
+  top: 0px; }
+  .arrow .fa-chevron-down {
+    font-size: 1.5em;
+    padding-top: 10px; }
+
+select, option {
+  text-align: center; }
+
+::-webkit-input-placeholder {
+  color: #3398DA; }
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #3398DA; }
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #3398DA; }
+
+:-ms-input-placeholder {
+  color: #3398DA; }
+
+.happySubmit {
+  width: 200px;
+  background-color: #3398DA;
+  color: #F1C40F;
+  border: none;
+  padding: 10px;
+  font-weight: bold; }
+
+#resultsPage {
+  padding-left: 0;
+  padding-right: 0; }
+
+.viewButtons {
+  position: relative;
+  max-width: 400px;
+  width: 100%;
+  display: none;
+  margin-top: 81px;
+  z-index: 1000; }
+
+.detailsButton {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0 auto;
+  width: 50%;
+  max-width: 200px;
+  padding: 10px;
+  background-color: #3398DA;
+  color: #F1C40F;
+  text-align: center;
+  cursor: pointer; }
+
+.mapButton {
+  width: 50%;
+  max-width: 200px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #3398DA;
+  color: #F1C40F;
+  text-align: center;
+  cursor: pointer; }
+
+.mapButton.pressed, .detailsButton.pressed {
+  background-color: white;
+  color: #3398DA;
+  border: solid 2px #3398DA; }
+
+.details {
+  max-width: 400px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 81px;
+  overflow-y: auto;
+  height: 100%; }
+
+#refineSearchButton {
+  margin: 0 auto;
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: white;
+  color: #3398DA;
+  border: solid 2px #3398DA;
+  display: block;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  margin-top: 10px; }
+  #refineSearchButton #fakeSelectText {
+    margin-right: 20px; }
+
+.searchBoxes .show {
+  display: block; }
+
+.searchBoxes {
+  display: none; }
+
+.results {
+  width: 100%;
+  height: auto; }
+
+.resultImageContainer {
+  width: 100%;
+  height: 40px;
+  overflow: hidden;
+  position: relative; }
+  .resultImageContainer h2 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #F1C40F;
+    font-weight: 700;
+    font-size: 1.8em;
+    text-transform: uppercase; }
+  .resultImageContainer .fa-plus-square, .resultImageContainer .fa-minus-square {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 2em;
+    color: #F1C40F;
+    cursor: pointer; }
+
+.resultImage img {
+  width: 100%; }
+
+.resultImageContainer.justTitle {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative; }
+
+.daytypeContainer {
+  height: 70px;
+  width: 100%;
+  background-color: #F1C40F; }
+  .daytypeContainer #dayIcons {
+    line-height: 70px;
+    padding-left: 20px;
+    display: inline-block; }
+    .daytypeContainer #dayIcons li {
+      display: inline-block; }
+      .daytypeContainer #dayIcons li .dayCircle {
+        border: 2px solid #3398DA;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        margin: 0 auto;
+        text-align: center;
+        line-height: 30px;
+        background-color: white; }
+        .daytypeContainer #dayIcons li .dayCircle span {
+          text-align: center;
+          color: #F1C40F; }
+      .daytypeContainer #dayIcons li .dayCircle.open {
+        background-color: #3398DA;
+        width: 32px;
+        height: 32px; }
+        .daytypeContainer #dayIcons li .dayCircle.open span {
+          color: #F1C40F;
+          font-weight: 700; }
+  .daytypeContainer #categoryIcons {
+    line-height: 70px;
+    padding-right: 20px;
+    display: inline-block;
+    float: right; }
+    .daytypeContainer #categoryIcons li {
+      display: inline-block;
+      padding-right: 10px;
+      font-size: 2em;
+      color: #3398DA; }
+
+.descriptionTextContainer {
+  width: 95%;
+  margin: 0 auto;
+  padding: 10px; }
+
+.descriptionText {
+  display: none; }
+  .descriptionText p {
+    color: #3398DA; }
+
+.deetsContainer {
+  width: 100%;
+  height: auto;
+  display: inline-block;
+  position: relative; }
+
+.addressContainer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: inline-block;
+  width: 35%; }
+  .addressContainer .streetText {
+    text-align: right;
+    margin-bottom: 0; }
+  .addressContainer .cityText {
+    font-weight: 700;
+    margin-bottom: 0;
+    text-align: right; }
+
+.otherInfoContainer {
+  float: left;
+  display: inline-block;
+  width: 60%; }
+  .otherInfoContainer #otherInfoIcons {
+    display: block;
+    float: left; }
+    .otherInfoContainer #otherInfoIcons li {
+      display: inline-block; }
+      .otherInfoContainer #otherInfoIcons li p {
+        display: inline-block;
+        font-size: .9em;
+        color: #F1C40F;
+        margin-bottom: 0px; }
+      .otherInfoContainer #otherInfoIcons li a {
+        font-size: .9em;
+        color: #F1C40F; }
+      .otherInfoContainer #otherInfoIcons li i {
+        color: #3398DA;
+        padding-right: 5px; }
+
+#map {
+  width: 100%;
+  height: 100%; }
+
+@media (max-width: 50em) {
+  .viewButtons {
+    display: block; }
+  #refineSearchButton {
+    margin-top: 50px; } }
+
+/*# sourceMappingURL=app.css.map */
