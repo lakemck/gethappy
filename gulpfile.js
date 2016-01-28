@@ -13,4 +13,9 @@ var elixir = require('laravel-elixir');
 
 elixir(function(mix) {
     mix.sass('app.scss');
+    mix.sass("otherstyles.scss");
+    mix.sass("resultsstyles.scss");
+    // mix.scripts([
+    //     '../../../bower_components/google-map-infobubble/src/infobubble-compiled.js'
+    // ]);
 });

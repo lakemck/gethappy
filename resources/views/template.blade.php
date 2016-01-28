@@ -10,12 +10,17 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css" rel="stylesheet" />
+<!--         <link href="{{URL::to('bower_components/dist/css/select2.min.css')}}" rel="stylesheet">
+ -->        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<!--         <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
 <!--         <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
         <link href="{{URL::to('css/app.css')}}" rel="stylesheet" media="screen, projection">
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+@yield('styles')
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -23,9 +28,9 @@
         <![endif]-->
     <nav class="mynav" role="navigation">
 <!--       <div class="container"> -->
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="{{URL::to('/')}}">
           <span class="headerImage">
-<img src="img/happyfacetinyblue.png" class="logoImage" alt=""></span>
+<img src="{{URL::to('images/happyfacetinyblue.png')}}" class="logoImage" alt=""></span>
           </a>
         <div class="navButton">
           <button type="button" class="hamburger">
@@ -37,10 +42,8 @@
         </div>
         <div class="homeMenu">
           <ul>
-            <li class="active"><a href="#homeContainer">HOME</a></li>
-            <li><a href="#workContainer">WORK</a></li>
-            <li><a href="#aboutContainer">ABOUT</a></li>
-            <li><a href="#contactContainer">CONTACT</a></li>
+            <li class="active"><a href="{{URL::to('/')}}">HOME</a></li>
+            <li><a href="{{URL::to('/about')}}">ABOUT</a></li>
           </ul>  
 <!--           <form class="navbar-form navbar-right" role="form">
             <div class="form-group">
@@ -53,29 +56,38 @@
           </form> -->
         </div><!--/.navbar-collapse -->
 <!--       </div> -->
+      @if(Auth::check())
+        <div class="adminStuff">
+          <h4>Hi {{Auth::user()->name}}!</h4>
+          <a href="{{URL::to('/articles/show')}}" class="adminLinks">ADMIN HUB</a>
+          <a href="{{URL::to('/auth/logout')}}" class="adminLinks">LOGOUT</a>
+        </div>  
+      @endif
     </nav>
 
     @yield('content')
-        
-      <footer>
-        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWBBPv_XC5CpL6F7mfyLTMFfs9dj1cfYQ&libraries=places"></script>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    <!-- Use yield for multiple things. eg if you want a footer in another page but not on the homepage you can yield('footer') here, then write different code under @section('footer') on the other page-->
 
-        <script src="js/vendor/bootstrap.min.js"></script>
+<!--       <footer> -->
 
-        <script src="js/main.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBWBBPv_XC5CpL6F7mfyLTMFfs9dj1cfYQ&signed_in=true&libraries=places"></script>
+<!-- <script type="text/javascript" src="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/infobox/src/infobox.js"></script> -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
-        </script>
-      </footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>
+
+<script type="text/javascript" src="{{ URL::asset('js/main.js') }}"></script>
+{!! HTML::script('js/infobubble.js'); !!}
+{!! HTML::script('js/imagesloaded.pkgd.min.js'); !!}
+{!! HTML::script('js/isotope.pkgd.min.js'); !!}
+<script src="https://cdn.jsdelivr.net/jquery.mixitup/2.1.11/jquery.mixitup.min.js"></script>
+
+
+<!--       </footer> -->
+    @yield('footer')
     </body>
 </html>

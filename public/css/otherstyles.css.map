@@ -1,0 +1,1 @@
+{"version":3,"sources":["otherstyles.scss"],"names":[],"mappings":"AAIA;EAEC,eAAe,EAFX","file":"otherstyles.css","sourcesContent":["$mainfont: 'Montserrat', sans-serif;\r\n$blue: #3398DA;\r\n$yellow: #F1C40F;\r\n\r\nbody{\r\n\t\r\n\toverflow: auto;\r\n\r\n}"],"sourceRoot":"/source/"}

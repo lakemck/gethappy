@@ -1,0 +1,1 @@
+{"version":3,"sources":["resultsstyles.scss"],"names":[],"mappings":"AACA;EAEI,2CAA4B,EAFxB;;AAMR;EAEE,0BATc,EAOI","file":"resultsstyles.css","sourcesContent":["$yellow: #F1C40F;\r\n.mynav {\r\n\r\n    box-shadow: 0 2px 4px 0 rgba(0,0,0,.3);\r\n\r\n}\r\n\r\n.select2-container {\r\n\r\n  border: solid 2px $yellow;\r\n\r\n}"],"sourceRoot":"/source/"}

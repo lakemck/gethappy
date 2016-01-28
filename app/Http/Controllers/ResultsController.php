@@ -25,7 +25,7 @@ class ResultsController extends Controller
      */
     public function create()
     {
-        //
+        // return view('results.create');
     }
 
     /**

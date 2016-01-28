@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'debug' => env('APP_DEBUG', false),
+    'debug' => env('APP_DEBUG', true),
 
     /*
     |--------------------------------------------------------------------------
@@ -136,6 +136,10 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        'Illuminate\Html\HtmlServiceProvider',
+        'Intervention\Image\ImageServiceProvider',
+        'Toin0u\Geocoder\GeocoderServiceProvider',
+        'Laracasts\Flash\FlashServiceProvider',
 
         /*
          * Application Service Providers...
@@ -193,7 +197,11 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
-
+        'Form'=> 'Illuminate\Html\FormFacade', 
+        'HTML'=> 'Illuminate\Html\HtmlFacade',
+        'Image' => 'Intervention\Image\Facades\Image',
+        'Geocoder' => 'Toin0u\Geocoder\Facade\Geocoder',
+        'Flash' => 'Laracasts\Flash\Flash',
     ],
 
 ];

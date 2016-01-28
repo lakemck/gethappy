@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
+
 class AuthController extends Controller
 {
     /*
@@ -31,7 +32,14 @@ class AuthController extends Controller
     public function __construct()
     {
         $this->middleware('guest', ['except' => 'getLogout']);
+        // $this->middleware('auth');
+        
     }
+
+protected $redirectPath = '/articles/show';
+protected $loginPath = '/auth/login';
+protected $redirectTo = '/articles/show';
+// protected $redirectAfterLogout = '/';
 
     /**
      * Get a validator for an incoming registration request.

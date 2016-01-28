@@ -1,13 +1,13 @@
-// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
-
-$yellow: #F1C40F;
-
-
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 @import url(https://fonts.googleapis.com/css?family=Montserrat:100,400,700);
 
 $mainfont: 'Montserrat', sans-serif;
 $blue: #3398DA;
+$lightblue: rgba(51, 152, 218, 0.71);
 $yellow: #F1C40F;
+$lightyellow: #f4d03f;
+$darkYellow: #927608;
+$green: #26A65B;
 
 
 *:focus {
@@ -32,6 +32,42 @@ body, p, h1, h2, h3, a{
 	font-family: $mainfont;
 
 }
+::-webkit-input-placeholder {
+   text-align: center;
+   color: $blue;
+   	  &:hover{
+  		color: white;
+  		font-weight: 700;
+  	}
+
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   text-align: center; 
+      color: $blue; 
+       &:hover{
+  		color: white;
+  		font-weight: 700;
+  	}
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   text-align: center;  
+      color: $blue;
+   	  &:hover{
+  		color: white;
+  		font-weight: 700;
+  	}
+}
+
+:-ms-input-placeholder {  
+   text-align: center; 
+      color: $blue;
+   	  &:hover{
+  		color: white;
+  		font-weight: 700;
+  	}
+}
 
 ul{
 
@@ -55,14 +91,34 @@ margin: 0;
 padding: 0;	
 }
 
+// ADMIN STYLES
+
+.adminStuff{
+	
+	display: block;
+	width: 200px;
+
+}
+
+.adminLinks{
+
+	display: block;
+
+}
 // HEADER STYLES
 
 .mynav {
 
 	position: absolute;
 	width: 100%;
-	height: 81px;
+	height: 50px;
 	background-color: $yellow;
+    // box-shadow: 0 2px 4px 0 rgba(0,0,0,.3);
+	.navbar-brand{
+	
+	padding: 5px;
+
+	}
 }
 
 .homeMenu{
@@ -71,16 +127,41 @@ padding: 0;
 
 }
 
-.homeMenu .show{
+.homeMenu li a{
+
+	color: $yellow;
+
+		&:hover{
+
+		font-weight: 700;
+		text-decoration: underline;
+	}
+
+}
+
+.homeMenu.show{
 	
 	display: block;
-	margin-top: 81px;
+	// margin-top: 50px;
+	float: right;
+	background-color: rgba(51, 152, 218, 0.80);
+	color: $yellow;
+	padding: 10px;
+	text-align: center;
+	min-width: 200px;
+	z-index: 1000;
+	// &:hover{
+
+	// 	background-color: $yellow;
+
+	// }
+
 
 }
 
 .hamburger{
 	
-	float: right;
+	float: right; 
 	margin-top: 20px;
 	margin-right: 20px;
 	background-color: transparent;
@@ -101,7 +182,11 @@ padding: 0;
 
 }
 
+.logoImage{
+	width: 40px;
+	height: 40px;
 
+}
 
 
 // MAIN PAGE STYELS
@@ -114,9 +199,9 @@ padding: 0;
   min-height: 100%;
   height: 100%;
   min-height: 100vh;
-flex-flow: column wrap;	
-background-color: $yellow;
-width: 100%;
+  flex-flow: column wrap;	
+  background-color: $yellow;
+  width: 100%;
 }
 
 
@@ -126,14 +211,12 @@ width: 100%;
 	margin: 0 auto;
 	text-align: center;
 	margin-top: -100px;
+	margin-bottom: 10px;
 
 }
 
-.logoimage{
+.mainLogoImage{
 	width: 100%;
-
-
-
 }
 
 .logoName{
@@ -144,7 +227,7 @@ width: 100%;
 		display: inline-block;
 		color: $blue;
 		font-size: 3.5em;
-		border-bottom: 2px $blue solid;
+		border-bottom: 2px white solid;
 		font-weight: 700;
 		letter-spacing: -0.1em;
 
@@ -160,9 +243,78 @@ width: 100%;
 
 }
 
+// ABOUT PAGE
+
+#aboutPage{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  height: 100%;
+  min-height: 100vh;
+  flex-flow: column wrap;	
+  background-color: $blue;
+  width: 100%;
+  p{
+  	color: white;
+  	span{
+  		color: $yellow;
+  		font-weight: 700;
+  	}
+  }
+}
+.aboutLogoName{
+
+	width: auto;
+
+	h1{
+		display: inline-block;
+		color: $yellow;
+		font-size: 3.5em;
+		border-bottom: 2px white solid;
+		font-weight: 700;
+		letter-spacing: -0.1em;
+
+	}
+
+	h2{
+
+	color: $yellow;
+	font-weight: 100;
+	font-size: 1em;
+
+	}
+
+}
+
+// SHOW PAGE
+
+#showPage{
+
+  min-height: 100%;
+  height: 100%;
+  padding-top: 100px;
+  width: 80%;
+  p{
+  	color: white;
+  	span{
+  		color: $yellow;
+  		font-weight: 700;
+  	}
+  }
+}
+
 // RESULTS STYLINGS
 
+.searchBoxes{
 
+	max-width: 500px;
+	width: 90%;
+	margin: 0 auto;
+	text-align: center;
+
+}
 
 .searchForm{
   
@@ -170,27 +322,56 @@ width: 100%;
   margin: 0 auto;
   margin-top: 20px;
   padding-bottom: 10px;
-
+		
 }
 
 
 .locationSearch {
   margin: 0 auto;
   width: 200px;
-  padding: 10px;
+  padding: 5px;
   margin-bottom: 10px;
   background-color: white;
   color: $blue;
   border: solid 2px $blue;
   position: relative;
-  display: block;
+  display: inline-block;
   text-transform: uppercase;
   text-align: center;
 
 
 }
 
-.categorySelector{
+.geolocationSearch {
+  margin: 0 auto;
+  width: 200px;
+  padding: 5px;
+  margin-bottom: 10px;
+  background-color: $yellow;
+  color: $blue;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  text-align: center;
+  			border: solid 2px $blue;
+ cursor: pointer; 
+		&:hover{
+  			transition: .3s all ease;
+			color: $yellow;
+			background-color: $blue;
+
+		}
+
+		span{
+
+		font-weight: 700;
+		font-size: .8em;
+		}	
+	
+
+}
+
+.categorySelector, .distanceSelector{
 	
 	margin: 0 auto;
   width: 200px;
@@ -199,25 +380,114 @@ width: 100%;
   background-color: white;
   color: $blue;
   border: solid 2px $blue;
-  border-top: none;
+  // border-top: none;
   position: relative;
   display: block;
   text-transform: uppercase;
   text-align: center;
+  margin-top: -10px;
+	cursor: pointer; 
+// background-image:url('../images/chevron2.png');
+// background-repeat:no-repeat;
+// background-position:right center;
+// outline:0;
+	  &:hover{
+  		color: $blue;
+  		font-weight: 700;
+  		background-color: $yellow;
+  		transition: .3s all ease;
+  	}
+}
+
+// .categorySelector:before {
+//     content: "\f078"; 
+//     font-family: FontAwesome;
+//     left:-5px;
+//     position:absolute;
+//     top:0;
+//  }
+
+.select2-container {
+
+	margin: 0 auto;
+  width: 200px;
+  // padding: 10px;
+  margin-bottom: 10px;
+  background-color: white;
+  color: $blue;
+  border: solid 2px $blue;
+  // border-top: none;
+  position: relative;
+  display: block;
+  text-transform: uppercase;
+  text-align: center;
+	cursor: pointer;
+  border-radius: 0;
+
+  	  	&:hover{
+  		color: $blue;
+  		background-color: $yellow;
+  		font-weight: 700;
+  		// background-color: $lightyellow;
+  		transition: .3s all ease;
+  	}
+
 
 }
 
+.select2-container--default .select2-selection--multiple.daySelect{
+	
+	border: none;
+	background-image:url('../images/chevron2blue.png'),
+					url('../images/calendar.png');
+
+	background-repeat:no-repeat,
+						no-repeat;
+	background-position:170px center,
+						10px center;
+	outline:0;
+	cursor: pointer;
+}
+
+.select2-container--default .select2-selection--multiple.catSelect{
+	
+	border: none;
+	background-image:url('../images/chevron2blue.png'),
+					url('../images/cocktail.png');
+
+	background-repeat:no-repeat,
+						no-repeat;
+	background-position:170px center,
+						10px center;
+	outline:0;
+	cursor: pointer;
+}
+
+.select2-container--default .select2-search--inline .select2-search__field{
+
+cursor: pointer;
+// background-image:url('http://i47.tinypic.com/r02vbq.png');
+// background-repeat:no-repeat;
+// background-position:left center;
+// outline:0;
+
+}
+.select2-container--default .select2-container--focus{
+	
+	border: none !important;
+
+}
 .categorySelector .hide{
 	
 	display: none;
 
 }
 
-#fakeSelect{
+#fakeSelect, #fakeSelect2{
 	
 margin: 0 auto;
   width: 200px;
-  padding: 10px;
+  padding: 5px;
   margin-bottom: 10px;
   background-color: white;
   color: $blue;
@@ -237,11 +507,32 @@ margin: 0 auto;
 
 }
 
+
+
+#fakeSelect3, #fakeSelect4{
+	
+margin: 0 auto;
+  width: 200px;
+  padding: 5px;
+  margin-bottom: 10px;
+  background-color: white;
+  color: $blue;
+  border: solid 2px $yellow;
+  position: relative;
+  display: block;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  cursor: pointer; 
+
+
+}
+
 .arrow{
 	
 	position: absolute;
-	height:40px;
-	width: 40px;
+	height:30px;
+	width: 30px;
 	color: $yellow;
 	background-color: $blue;
 	right: 0px;
@@ -250,11 +541,9 @@ margin: 0 auto;
 		.fa-chevron-down{
 
 		font-size:1.5em;
-		padding-top: 10px;
+		padding-top: 5px;
 
 		}
-
-
 }
 
 select, option{
@@ -262,23 +551,7 @@ select, option{
 	text-align: center;
 }
 
-::-webkit-input-placeholder {
-   color: $blue;
-}
-
-:-moz-placeholder { /* Firefox 18- */
-   color: $blue;  
-}
-
-::-moz-placeholder {  /* Firefox 19+ */
-   color: $blue;  
-}
-
-:-ms-input-placeholder {  
-   color: $blue;  
-}
-
-.happySubmit{
+.searchSubmit{
 
   width: 200px;
   background-color: $blue;
@@ -286,6 +559,14 @@ select, option{
   border: none;
   padding: 10px;
   font-weight: bold;
+  	&:hover{
+  		color: $blue;
+  		background-color: $yellow;
+  		transition: .3s all ease;
+  		border: solid 2px $blue;
+  		text-shadow: 1px 1px rgba(0,0,0,.3);
+  	}
+
 }
 
 
@@ -297,6 +578,12 @@ select, option{
 	padding-right:0;
 }
 
+.barContainer{
+
+	border-top: 2px solid $yellow;
+	width: 100%;
+}
+
 .viewButtons{
 	position: relative;
 	// left: 0;
@@ -304,7 +591,7 @@ select, option{
 	max-width: 400px;
 	width: 100%;
 	display: none;
-	margin-top: 81px;
+	margin-top: 50px;
 	z-index: 1000;
 }
 
@@ -356,9 +643,11 @@ select, option{
 	width: 100%;
 	position: absolute;
 	left: 0;
-	top: 81px;
+	top: 50px;
 	overflow-y: auto;
 	height: 100%;
+	background-color: $blue;
+	z-index: -100;
 
 }
 
@@ -389,19 +678,20 @@ select, option{
 
 #refineSearchButton{
 	
-	margin: 0 auto;
+margin: 0 auto;
   width: 95%;;
-  padding: 10px;
+  padding: 5px;
   margin-bottom: 10px;
   background-color: white;
   color: $blue;
-  border: solid 2px $blue;
+  border: solid 2px $yellow;
   display: block;
   text-transform: uppercase;
   text-align: center;
   position: relative;
   cursor: pointer; 
   margin-top: 10px;
+  margin-bottom: 10px;
 
 	  #fakeSelectText{
 
@@ -411,21 +701,128 @@ select, option{
 
 }
 
-.searchBoxes .show{
+#showSortButton{
 	
+	margin: 0 auto;
+  width: 95%;;
+  padding: 5px;
+  margin-bottom: 10px;
+  background-color: white;
+  color: $yellow;
+  border: solid 2px $yellow;
+  display: block;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  cursor: pointer; 
+  margin-top: 10px;
+  margin-bottom: 10px;
 
-	display: block;
+	  #fakeSelectText{
+
+	  margin-right: 20px;
+
+	  }
 
 }
 
-.searchBoxes {
+.refineArrow{
 	
+	position: absolute;
+	height:30px;
+	width: 30px;
+	color: $blue;
+	background-color: $yellow;
+	right: 0px;
+	top:0px;
 
+		.fa-chevron-down, .fa-sort{
+
+		font-size:1.5em;
+		padding-top: 5px;
+
+		}
+}
+
+
+.refineSearchSubmit{
+
+  width: 200px;
+  background-color: $yellow;
+  color: $blue;
+  border: none;
+  padding: 10px;
+  font-weight: bold;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  	&:hover{
+  		color: $blue;
+  		background-color: $yellow;
+  		transition: .3s all ease;
+  		border: solid 2px $yellow;
+  		text-shadow: 1px 1px rgba(0,0,0,.3);
+  	}
+
+}
+
+.sortButtons{
+
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	margin-bottom: 5px;
+}
+
+.sortDistance, .sortRating{
+
+	width: 30%;
+	padding: 3px;
+	// border: solid 2px $yellow;
+	background-color: $yellow;
+}
+
+.sortDistance{
+
+
+	color: $blue;
+
+}
+
+.sortRating{
+
+	color: $blue;
+}
+
+.sortRating.pressed, .sortDistance.pressed{
+	
+  	background-color: white;
+  	color: $blue;
+  	// border: solid 2px $blue;
+
+}
+
+#sortContainer .mix{
 	display: none;
-
 }
 
 // RESULTS
+
+.resultsCounter{
+
+	color: $blue;
+	font-size: .7em;
+	font-weight: 700;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+		.resultsNumber{
+		color: $yellow;
+		font-size: 1.5em !important;
+			}
+
+}
+
+
 
 // IMAGE
 
@@ -433,35 +830,59 @@ select, option{
 	
 	width: 100%;
 	height: auto;
-
+	background-color: $blue;
+	margin-bottom: 50px;
 }
 
 .resultImageContainer{
 	
 	width: 100%;
-	height: 40px;
+	height: 70px;
 	overflow: hidden;
 	position: relative;
-		h2{
+		.resultsTitle{
 
 			position: absolute;
 			top: 10px;
 			left: 10px;
+			display: inline-block;
+			width: 100%;
+			
+			h2{
 			color: $yellow;
 			font-weight: 700;
-			font-size: 1.8em;
+			font-size: 2em;
 			text-transform: uppercase;
-
+			text-shadow: 2px 2px rgba(0,0,0,.5);
+			}
+			h4{
+			color: $blue;
+			font-weight: 700;
+			font-size: 1em;
+			text-transform: uppercase;
+			text-shadow: 2px 2px rgba(0,0,0,.6);
+			padding: 0;
+			margin: 0;	
+			}
 		}
+
 
 		.fa-plus-square, .fa-minus-square{
 
 			position: absolute;
-			top: 0;
-			right: 0;
+			top: 5px;
+			right: 10px;
 			font-size: 2em;
 			color: $yellow;
 			cursor: pointer;
+			text-shadow: 1px 1px rgba(0,0,0,.3);
+				&:hover{
+					
+					color: $blue;
+					transition: ease all .2s;
+
+				}
+			// background-color: $blue;
 
 		}
 
@@ -482,19 +903,22 @@ select, option{
 
 }
 
+// .grid-item{
 
+// 	height: auto;
+// }
 
 // DAY ICON ETC
 
 .daytypeContainer{
 	
-	height: 70px;
+	height: 45px;
 	width: 100%;
 	background-color: $yellow;
 
 	#dayIcons{
 
-		line-height: 70px;
+		line-height: 45px;
 		padding-left: 20px;
 		display: inline-block;
 
@@ -507,17 +931,18 @@ select, option{
 
 				border: 2px solid $blue;
 				border-radius: 50%;
-				width: 30px;
-				height: 30px;
+				width: 25px;
+				height: 25px;
 				margin: 0 auto;
 				text-align: center;
-				line-height: 30px;
+				line-height: 25px;
 				background-color: white;
 
 				span{
 					
 					text-align: center;
 					color: $yellow;
+					font-size:.8em; 
 
 					// position: absolute;
 					// top: 0;
@@ -528,13 +953,15 @@ select, option{
 			.dayCircle.open{
 
 				background-color: $blue;
-				width: 32px;
-				height: 32px;
+				width: 25px;
+				height: 25px;
 
-				span{
+				p{
 					
 					color: $yellow;
 					font-weight: 700;
+					font-size:.8em; 
+					line-height: 25px;
 
 				}
 
@@ -551,7 +978,7 @@ select, option{
 
 	#categoryIcons{
 
-		line-height: 70px;
+		line-height: 45px;
 		padding-right: 20px;
 		display: inline-block;
 		float: right;
@@ -560,7 +987,7 @@ select, option{
 				
 				display: inline-block;
 				padding-right: 10px;
-				font-size: 2em;
+				font-size: 1.4em;
 				color: $blue;
 
 			}
@@ -568,39 +995,73 @@ select, option{
 	}
 }
 
+.openToday{
+
+	// border: 2px solid $blue;
+	border-radius: 50%;
+	width: 25px;
+	height: 25px;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 25px;
+	// background-color: white;
+	position: relative;
+
+}
+
+.openToday i{
+
+	font-size: 29.5px;
+	position: absolute;
+	top: 5px;
+	right: 1px;
+	color: $blue;
+	font-weight: 700;
+
+}
 
 // DESCRIPTION TEXT
 
 .descriptionTextContainer{
 
-	width: 95%;
+	width: 100%;
 	margin: 0 auto;
-	padding: 10px;
+	padding: 0;
+	background-color: white;
 
 }
 
 .descriptionText{
 
-	display: none;
+	// display: none;
+	padding: 10px;
 	p{
 
-		color: $blue;
+		// color: $blue;
+		color: #333333;
 
 	}
 
 }
 
-// .descriptionText{
+.dealText{ 
+
+	height: 30px;
+	background-color: $blue;
+	text-align: center;
 
 
-
-// 	p{
-
-// 		color: $blue;
-
-// 	}
-
-// }
+	p{
+	line-height: 30px;
+	text-align: center;
+	color: white;
+	text-transform: uppercase;
+	background-color: $blue;
+	margin-left: 0px;
+	margin-right: 0px;
+	display:inline-block
+	}
+}
 
 .deetsContainer{
 
@@ -608,18 +1069,21 @@ select, option{
 	height: auto;
 	display: inline-block;
 	position: relative;
+	padding-bottom: 5px;
 
 }
 
 .addressContainer{
 
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	display: inline-block;
-	width: 35%;	
+	// position: absolute;
+	// bottom: 5px;
+	// right: 0;
+	display: block;
+	// width: 35%;	
+	// padding-right: 5px;
 
 	.streetText{
+		font-size: .9em;
 		text-align: right;
 		margin-bottom: 0;
 	}
@@ -638,36 +1102,31 @@ select, option{
 
 	float: left;
 	display: inline-block;
-	width: 60%;
+	width: 100%;
 
-	#otherInfoIcons{
+	.otherInfoIcons{
 		
 		display: block;
 		float: left;
+		// padding-left: 5px;
 	
 		li{
 
-			display: inline-block;
+			// display: inline-block;
 
 			p{
 
 				display: inline-block;
 				font-size: .9em;
-				color: $yellow;
+				color: $blue;
 				margin-bottom: 0px;
-
-			}
-		
-			a{
-
-				font-size: .9em;
-				color: $yellow;
 
 			}
 
 			i{
-				color: $blue;
+				color: $yellow;
 				padding-right:   5px;
+				font-size: 1.1em;
 
 			}
 
@@ -678,16 +1137,140 @@ select, option{
 
 }
 
+.websiteLink{
 
+	font-size: .9em;
+	color: $blue;
+	&:hover{
+
+		color: $yellow;
+
+	}
+	// &:visited{
+	// 	text-decoration: none;
+	// 	color:$yellow;
+	// }
+
+}
+
+.getDirectionsLink{
+
+		text-align: center;
+		background-color: $blue;
+		padding: 5px;
+		color: $yellow;
+		font-weight: 700;
+		&:hover{
+		
+			background-color: $yellow;
+			// border: 1px solid $blue;
+			color: $blue;
+
+		}
+	// 	&:visited{
+	// 	text-decoration: none;
+	// 	color:$yellow;
+	// }
+}
+
+
+.otherInfoContainer li:last-child{
+
+	margin-top: 10px;
+}
 
 //MAP
 
-#map{
+.mapContainer{
+
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 50px;
+	left: 400px;
+	z-index:-100;
+
+}
+
+#map_canvas{
 	
 	width: 100%;
 	height: 100%;
+margin: 0; 
+padding: 0;
+position: relative;
+}
+
+
+// .infobox-wrapper {
+//     display:none;
+// }
+
+.infoWindowTitle{
+
+	text-transform: uppercase;
+	font-weight: 700;
+	color: white;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#infoWindowBox {
+    background:$blue;
+    color:$yellow;
+    font-family:$mainfont;
+    font-size:12px;
+    // padding-left: 10px;
+    // padding-right: 10px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+	position: relative;
 
 }
+
+.infoDistance{
+
+	// color: white;
+	font-weight: 700;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	color: $yellow;
+}
+
+.infoDeal{
+
+	color: $blue;
+	font-size: 1.2em;
+	margin: 0 auto;
+	background-color: $yellow;
+	line-height: 1.2em;
+	padding: 10px;
+	overflow: hidden;
+
+}
+
+// .scrollFix {
+//     overflow: hidden;
+//     white-space: nowrap;
+// }
+
+// ADD/EDIT FORM
+
+.formContainer{
+
+	margin-top: 90px;
+
+}
+
+.btn a{
+
+	color: white;
+
+}
+
+// MEDIA QUERIES
 
 
 @media (max-width: 50em) {
