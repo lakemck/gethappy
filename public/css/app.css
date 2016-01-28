@@ -5996,7 +5996,8 @@ button.close {
   outline: 0; }
 
 button {
-  outline: 0; }
+  outline: 0;
+  border: none;}
 
 body {
   height: 100%;
@@ -6061,7 +6062,8 @@ h2 {
   position: absolute;
   width: 100%;
   height: 50px;
-  background-color: #F1C40F; }
+  background-color: #F1C40F;
+  z-index: 2000;}
   .mynav .navbar-brand {
     padding: 5px; }
 
@@ -6408,12 +6410,12 @@ select, option {
   background-color: #3398DA;
   color: #F1C40F;
   text-align: center;
-  cursor: pointer; }
+  cursor: pointer;
+  border: 2px solid #F1C40F;}
 
 .mapButton.pressed, .detailsButton.pressed {
   background-color: white;
-  color: #3398DA;
-  border: solid 2px #3398DA; }
+  color: #3398DA;}
 
 .details {
   max-width: 400px;
