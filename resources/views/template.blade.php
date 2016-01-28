@@ -15,10 +15,7 @@
  -->        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <!--         <link rel="stylesheet" href="css/bootstrap.min.css"> -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
-<!--         <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
         <link href="{{URL::to('css/app.css')}}" rel="stylesheet" media="screen, projection">
-
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 @yield('styles')
     </head>
