@@ -6397,7 +6397,8 @@ select, option {
   background-color: #3398DA;
   color: #F1C40F;
   text-align: center;
-  cursor: pointer; }
+  cursor: pointer;
+  border: 2px solid #F1C40F;}
 
 .mapButton {
   width: 50%;
