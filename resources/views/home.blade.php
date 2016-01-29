@@ -31,7 +31,7 @@
 
       <div id="geolocationButton" class="geolocationSearch"><span>or</span> Use My Location <i class="fa fa-location-arrow"></i></div>
 
-      <div class="hiddenFields">
+      <div class="hiddenFields totesHidden">
         {!! Form::select('categoryList[]', $categories, null, ['placeholder' => 'TYPE', 'class' => 'categorySelector', 'id' => 'categoryList', 'multiple']) !!}
       {!! $errors->first('category','<p class="error">:message</p>')!!}
         {!! Form::select('dayList[]', $days, null, ['class' => 'distanceSelector', 'id' => 'dayList', 'multiple']) !!}
