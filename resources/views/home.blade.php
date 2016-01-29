@@ -69,7 +69,7 @@
 <script type="text/javascript">
 $('#categoryList').select2({
         placeholder: "CATEGORY",
-        minimumResultsForSearch: -1
+        minimumResultsForSearch: 10
       });
   $('#dayList').select2({
     placeholder: "DAY",
