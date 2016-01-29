@@ -11,10 +11,7 @@
       <button type="button" class="mapButton">MAP</button>
 
     </div> 
-  <div class="details"> 
-
-  
-
+ <div class="details"> 
     <div id="refineSearchButton">
         <span id="fakeSelectText"><span class="resultsCounter"><span class="resultsNumber">{{$articles->count()}}</span> results</span> REFINE SEARCH</span>
         <div class="refineArrow"><i class="fa fa-chevron-down"></i></div>
@@ -31,26 +28,8 @@
       {!! Form::hidden('lat', null, ['id' => 'lat'])!!}
       {!! Form::hidden('lng', null, ['id' => 'lng'])!!}
 
-<!--       <div id="fakeSelect3">
-        <span id="fakeSelectText">TYPE</span>
-        <div class="arrow"><i class="fa fa-chevron-down"></i></div>
-      </div> -->
-
       {!! Form::select('categoryList[]', $categories, null, ['class' => 'categorySelector', 'id' => 'categoryList2', 'multiple']) !!}
     {!! $errors->first('category','<p class="error">:message</p>')!!}
-
-
-<!-- DISTANCE NOT USING ANYMORE -->
-<!--       <div id="fakeSelect4">
-        <span id="fakeSelectText">DISTANCE</span>
-        <div class="arrow"><i class="fa fa-chevron-down"></i></div>
-      </div>
-      {!! Form::select('distance', ['2' => 'Short Walk', '8' => 'City Wide', '1000' => 'NZ'], null, ['class' => 'distanceSelector','size' => '3']) !!} -->
-        
-<!--         <div id="fakeSelect4">
-          <span id="fakeSelectText">DAY</span>
-          <div class="arrow"><i class="fa fa-chevron-down"></i></div>
-        </div> -->
         {!! Form::select('dayList[]', $days, null, ['class' => 'distanceSelector', 'id' => 'dayList2', 'multiple']) !!}
       {!! $errors->first('day','<p class="error">:message</p>')!!}
       
@@ -64,149 +43,137 @@
         <div class="refineArrow"><i class="fa fa-sort"></i></div>
     </div> 
     <div class="button-group sort-by-button-group row sortButtons">
-<!--       <button data-sort-value="distance" class="sortDistance"><i class="fa fa-location-arrow"></i>distance</button>
-      <button data-sort-value="rating" class="sortRating"><i class="fa fa-star"></i>rating</button> -->
       
 <!-- MIX IT UP -->
       <button class="sort sortDistance" data-sort="distance:asc"><i class="fa fa-location-arrow"></i> Distance</button>
       <button class="sort sortRating" data-sort="rating:desc"><i class="fa fa-star"></i> Rating</button>
     </div>
+    
     <div class="results" id="sortContainer">
-
-
-@if ($articles->count())
-
-<?php
-// set the default timezone to use. 
-date_default_timezone_set('Pacific/Auckland');
-// Prints something like: Monday
-$today = date("l");
-?>
-
-@foreach ($articles as $article)
-  <article class="barContainer mix category-<?php echo $article->id; ?>" data-rating="<?php echo $article->rating; ?>" data-distance="<?php echo $article->distance; ?>">
-     <div class="resultImageContainer">
-        <div class="resultImage">
-@if ($article->image != '')          
-        {!! HTML::image('images/'.$article->image, $article->image) !!}  
-@else 
-        <img src="{{URL::to('images/gd.jpg')}}" alt="">  
-@endif
-        </div>
-<?php $kms = round($article->distance, 1, PHP_ROUND_HALF_UP); ?>    
-<!-- CREATE AN ARRAY OF IDS THEN GET THE INDEX/KEY OF THIS PARTICULAR ARTICLE ID -->
-      <?php $something = $articles->lists('id'); 
-            $artID = $article->id;  
-            $key= $something->search($artID); ?>
-            
-       <div class="resultsTitle showMoreDetails" onclick="myClick(<?php echo $key; ?>);">
-          <h2>{{$article->title}}</h2><h4 class="distance"><?php echo $kms ?> km</h4> 
-       </div> 
-
-        <div class="showMoreDetails" onclick="myClick(<?php echo $key; ?>);"><i class="fa fa-plus-square"></i><i class="fa fa-minus-square"></i></div>
-      </div>
-      <div class="dealText">
-              @if ($article->deal != "" ) 
-                @if($article->rating == '1')
-                  <p><i class='fa fa-star'></i></p>
-                  @elseif($article->rating == '2')
-                  <p><i class='fa fa-star'></i><i class='fa fa-star'></i></p>
-                  @elseif($article->rating == '3')
-                  <p><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i></p>
-                @endif
-                <p>{{$article->deal}}</p>
-              @else
-                <p>No deals atm</p>
-              @endif  
-      </div>
-      <div class="daytypeContainer">
-
-        <ul id="dayIcons">
-          @foreach ($article->days as $day)
-              @if($day->dayname == 'Monday')
-                <li><div class="dayCircle open"><p>M</p></div></li>
-                  @elseif ($day->dayname  == 'Tuesday')
-                <li><div class="dayCircle open"><p>Tu</p></div></li>
-                 @elseif ($day->dayname  == 'Wednesday')
-                <li><div class="dayCircle open"><p>W</p></div></li>
-                 @elseif ($day->dayname  == 'Thursday')
-                <li><div class="dayCircle open"><p>Th</p></div></li>
-                 @elseif ($day->dayname  == 'Friday')
-                <li><div class="dayCircle open"><p>F</p></div></li>
-                @elseif ($day->dayname  == 'Saturday')
-                <li><div class="dayCircle open"><p>Sa</p></div></li>
-                @elseif ($day->dayname  == 'Sunday')
-                <li><div class="dayCircle open"><p>Su</p></div></li>
-              @endif
-          @endforeach 
-        </ul>
-
-        <ul id="categoryIcons">
-          @foreach ($article->categories as $category)
-            @if($category->name == 'Drinks')
-            <li><i class="fa fa-glass"></i></li>
-            @elseif ($category->name == 'Food')
-            <li><i class="fa fa-cutlery"></i></li>
-            @elseif ($category->name == 'Entertainment')
-            <li><i class="fa fa-film"></i></li>
-            @endif
-          @endforeach
-        </ul>
-
-      </div>
-
-      <div class="descriptionTextContainer">
+        @if ($articles->count())
+        <?php
+        // set the default timezone to use. 
+        date_default_timezone_set('Pacific/Auckland');
+        // Prints something like: Monday
+        $today = date("l");
+        ?>
+        @foreach ($articles as $article)
+          <article class="barContainer mix category-<?php echo $article->id; ?>" data-rating="<?php echo $article->rating; ?>" data-distance="<?php echo $article->distance; ?>">
+             <div class="resultImageContainer">
+                <div class="resultImage">
+        @if ($article->image != '')          
+                {!! HTML::image('images/'.$article->image, $article->image) !!}  
+        @else 
+                <img src="{{URL::to('images/gd.jpg')}}" alt="">  
+        @endif
+                </div>
+        <?php $kms = round($article->distance, 1, PHP_ROUND_HALF_UP); ?>    
+        <!-- CREATE AN ARRAY OF IDS THEN GET THE INDEX/KEY OF THIS PARTICULAR ARTICLE ID -->
+              <?php $something = $articles->lists('id'); 
+                    $artID = $article->id;  
+                    $key= $something->search($artID); ?>
+                    
+               <div class="resultsTitle showMoreDetails" onclick="myClick(<?php echo $key; ?>);">
+                  <h2>{{$article->title}}</h2><h4 class="distance"><?php echo $kms ?> km</h4> 
+               </div> 
         
-        <div class="descriptionText">
-          <p>{{$article->description}}</p>
-<!--           <div class="addressContainer">
-            <p class="streetText">{{$article->address}}</p>
-          </div> -->
-      @if(Auth::check())
-
-        <h4>{{Auth::user()->firstname}}</h4>
-        <p>{!! link_to_route('articleEdit_path', 'EDIT PLACE', [$article->id])!!}</p>
-      @endif
-          <div class="deetsContainer">
-             <div class="otherInfoContainer">
-              <ul class="otherInfoIcons">
-                <li><i class="fa fa-smile-o"></i><p>{{$article->address}}</p></li>
-                @if($article->phone != "")
-                <li><i class="fa fa-phone"></i><p>{{$article->phone}}</p></li>
-                @endif
-                @if($article->email != "")
-                <li><i class="fa fa-envelope-o"></i><p>{{$article->email}}</p></li>
-                @endif
-                @if($article->website != "")
-                <li><i class="fa fa-home"></i><a href="http://{{$article->website}}" target="blank" class="websiteLink">{{$article->website}}</a></li>
-                @endif
-
-<!-- GET DEST COORDINATES FOR GOOGLE DIRECTIONS -->
-    <?php $googDestLat = $article->lat;
-          $googDestLng = $article->lng;
-     ?> 
-                <li><a href="http://maps.google.com/maps?saddr=<?php echo $googDestLat.','.$googDestLng; ?>&daddr=<?php echo $startLat.','.$startLng; ?>" target='blank' class="getDirectionsLink">GET DIRECTIONS</a></li>
-              </ul>
-            </div>
-
-          </div>  
-        </div>
-
-      </div>
-  </article>
-@endforeach
-
-@else
-
-  <p>no search results</p>
-
-@endif
-  
-
+                <div class="showMoreDetails" onclick="myClick(<?php echo $key; ?>);"><i class="fa fa-plus-square"></i><i class="fa fa-minus-square"></i></div>
+              </div>
+              <div class="dealText">
+                      @if ($article->deal != "" ) 
+                        @if($article->rating == '1')
+                          <p><i class='fa fa-star'></i></p>
+                          @elseif($article->rating == '2')
+                          <p><i class='fa fa-star'></i><i class='fa fa-star'></i></p>
+                          @elseif($article->rating == '3')
+                          <p><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i></p>
+                        @endif
+                        <p>{{$article->deal}}</p>
+                      @else
+                        <p>No deals atm</p>
+                      @endif  
+              </div>
+              <div class="daytypeContainer">
+        
+                <ul id="dayIcons">
+                  @foreach ($article->days as $day)
+                      @if($day->dayname == 'Monday')
+                        <li><div class="dayCircle open"><p>M</p></div></li>
+                          @elseif ($day->dayname  == 'Tuesday')
+                        <li><div class="dayCircle open"><p>Tu</p></div></li>
+                         @elseif ($day->dayname  == 'Wednesday')
+                        <li><div class="dayCircle open"><p>W</p></div></li>
+                         @elseif ($day->dayname  == 'Thursday')
+                        <li><div class="dayCircle open"><p>Th</p></div></li>
+                         @elseif ($day->dayname  == 'Friday')
+                        <li><div class="dayCircle open"><p>F</p></div></li>
+                        @elseif ($day->dayname  == 'Saturday')
+                        <li><div class="dayCircle open"><p>Sa</p></div></li>
+                        @elseif ($day->dayname  == 'Sunday')
+                        <li><div class="dayCircle open"><p>Su</p></div></li>
+                      @endif
+                  @endforeach 
+                </ul>
+        
+                <ul id="categoryIcons">
+                  @foreach ($article->categories as $category)
+                    @if($category->name == 'Drinks')
+                    <li><i class="fa fa-glass"></i></li>
+                    @elseif ($category->name == 'Food')
+                    <li><i class="fa fa-cutlery"></i></li>
+                    @elseif ($category->name == 'Entertainment')
+                    <li><i class="fa fa-film"></i></li>
+                    @endif
+                  @endforeach
+                </ul>
+        
+              </div>
+        
+              <div class="descriptionTextContainer">
+                
+                <div class="descriptionText">
+                  <p>{{$article->description}}</p>
+        <!--           <div class="addressContainer">
+                    <p class="streetText">{{$article->address}}</p>
+                  </div> -->
+              @if(Auth::check())
+        
+                <h4>{{Auth::user()->firstname}}</h4>
+                <p>{!! link_to_route('articleEdit_path', 'EDIT PLACE', [$article->id])!!}</p>
+              @endif
+                  <div class="deetsContainer">
+                     <div class="otherInfoContainer">
+                      <ul class="otherInfoIcons">
+                        <li><i class="fa fa-smile-o"></i><p>{{$article->address}}</p></li>
+                        @if($article->phone != "")
+                        <li><i class="fa fa-phone"></i><p>{{$article->phone}}</p></li>
+                        @endif
+                        @if($article->email != "")
+                        <li><i class="fa fa-envelope-o"></i><p>{{$article->email}}</p></li>
+                        @endif
+                        @if($article->website != "")
+                        <li><i class="fa fa-home"></i><a href="http://{{$article->website}}" target="blank" class="websiteLink">{{$article->website}}</a></li>
+                        @endif
+        
+        <!-- GET DEST COORDINATES FOR GOOGLE DIRECTIONS -->
+            <?php $googDestLat = $article->lat;
+                  $googDestLng = $article->lng;
+             ?> 
+                        <li><a href="http://maps.google.com/maps?saddr=<?php echo $googDestLat.','.$googDestLng; ?>&daddr=<?php echo $startLat.','.$startLng; ?>" target='blank' class="getDirectionsLink">GET DIRECTIONS</a></li>
+                      </ul>
+                    </div>
+        
+                  </div>  
+                </div>
+        
+              </div>
+          </article>
+        @endforeach
+        @else
+          <p>no search results</p>
+        @endif
     </div>
-
-
-  </div>
+ </div>
 
   <div class="mapContainer">
     
