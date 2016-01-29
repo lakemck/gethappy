@@ -69,8 +69,7 @@
  POTENCH CHANGE SELECT TO THIS TYPE 
 <script type="text/javascript">
   $('#categoryList').select2({
-    placeholder: "CATEGORY",
-  formatSelectionCssClass: function (data, container) { return "myCssClass"; },
+    placeholder: "CATEGORY"
   });
   $('#dayList').select2({
     placeholder: "DAY",
