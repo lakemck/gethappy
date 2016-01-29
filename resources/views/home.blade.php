@@ -51,18 +51,17 @@
 @section('footer')
 
 <script type="text/javascript">
-$(document).ready(function() {
 
 $('#categoryList').select2({
-        placeholder: "CATEGORY",
-        minimumResultsForSearch: Infinity
+        minimumResultsForSearch: Infinity,
+        placeholder: "CATEGORY"
+
       });
   $('#dayList').select2({
-    placeholder: "DAY",
-  minimumResultsForSearch: Infinity
-  });
+    minimumResultsForSearch: Infinity,
+    placeholder: "DAY"
 
-});
+  });
 
 </script> 
 
