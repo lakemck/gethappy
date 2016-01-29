@@ -6798,6 +6798,16 @@ select, option {
   .viewButtons {
     display: block; }
   #refineSearchButton {
-    margin-top: 50px; } }
+    margin-top: 50px; }
+}
+@media (max-height: 37em){
+  
+  .mainLogoImage{
+    display: none;
+  }
+  
+}    
+  
+
 
 /*# sourceMappingURL=app.css.map */
