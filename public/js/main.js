@@ -17,6 +17,14 @@ $(function(){
 
     });
 
+    $('#categoryList').select2({
+            placeholder: "CATEGORY",
+            minimumResultsForSearch: -1
+          });
+      $('#dayList').select2({
+        placeholder: "DAY",
+      minimumResultsForSearch: -1
+      });
     $('.select2-selection--multiple').eq(1).addClass('daySelect');
     $('.select2-selection--multiple').eq(0).addClass('catSelect');
 
