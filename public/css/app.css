@@ -6295,7 +6295,8 @@ h2 {
   text-transform: uppercase;
   text-align: center;
   cursor: pointer;
-  border-radius: 0; }
+  border-radius: 0;
+  float: none;}
   .select2-container:hover {
     color: #3398DA;
     background-color: #F1C40F;
