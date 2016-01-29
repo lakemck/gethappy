@@ -66,12 +66,11 @@
 @stop
 @section('footer')
  
- POTENCH CHANGE SELECT TO THIS TYPE 
 <script type="text/javascript">
-  $('#categoryList').select2({
-    placeholder: "CATEGORY",
-    minimumResultsForSearch: -1
-  });
+$('#categoryList').select2({
+        placeholder: "CATEGORY",
+        minimumResultsForSearch: -1
+      });
   $('#dayList').select2({
     placeholder: "DAY",
   minimumResultsForSearch: -1
