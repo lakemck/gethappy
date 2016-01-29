@@ -6283,51 +6283,51 @@ h2 {
     background-color: #F1C40F;
     transition: .3s all ease; }
 
-.select2-container {
-  margin: 0 auto;
-  width: 200px;
-  margin-bottom: 10px;
-  background-color: white;
-  color: #3398DA;
-  border: solid 2px #3398DA;
-  position: relative;
-  display: block;
-  text-transform: uppercase;
-  text-align: center;
-  cursor: pointer;
-  border-radius: 0;
-  float: none;}
-  .select2-container:hover {
-    color: #3398DA;
-    background-color: #F1C40F;
-    font-weight: 700;
-    transition: .3s all ease; }
+/*.select2-container {*/
+/*  margin: 0 auto;*/
+/*  width: 200px;*/
+/*  margin-bottom: 10px;*/
+/*  background-color: white;*/
+/*  color: #3398DA;*/
+/*  border: solid 2px #3398DA;*/
+/*  position: relative;*/
+/*  display: block;*/
+/*  text-transform: uppercase;*/
+/*  text-align: center;*/
+/*  cursor: pointer;*/
+/*  border-radius: 0;*/
+/*  float: none;}*/
+/*  .select2-container:hover {*/
+/*    color: #3398DA;*/
+/*    background-color: #F1C40F;*/
+/*    font-weight: 700;*/
+/*    transition: .3s all ease; }*/
 
-.select2-container .select2-search--inline{
-  float: none;
-}    
+/*.select2-container .select2-search--inline{*/
+/*  float: none;*/
+/*}    */
 
-.select2-container--default .select2-selection--multiple.daySelect {
-  border: none;
-  background-image: url("../images/chevron2blue.png"), url("../images/calendar.png");
-  background-repeat: no-repeat, 						no-repeat;
-  background-position: 170px center, 10px center;
-  outline: 0;
-  cursor: pointer; }
+/*.select2-container--default .select2-selection--multiple.daySelect {*/
+/*  border: none;*/
+/*  background-image: url("../images/chevron2blue.png"), url("../images/calendar.png");*/
+/*  background-repeat: no-repeat, 						no-repeat;*/
+/*  background-position: 170px center, 10px center;*/
+/*  outline: 0;*/
+/*  cursor: pointer; }*/
 
-.select2-container--default .select2-selection--multiple.catSelect {
-  border: none;
-  background-image: url("../images/chevron2blue.png"), url("../images/cocktail.png");
-  background-repeat: no-repeat, 						no-repeat;
-  background-position: 170px center, 10px center;
-  outline: 0;
-  cursor: pointer; }
+/*.select2-container--default .select2-selection--multiple.catSelect {*/
+/*  border: none;*/
+/*  background-image: url("../images/chevron2blue.png"), url("../images/cocktail.png");*/
+/*  background-repeat: no-repeat, 						no-repeat;*/
+/*  background-position: 170px center, 10px center;*/
+/*  outline: 0;*/
+/*  cursor: pointer; }*/
 
-.select2-container--default .select2-search--inline .select2-search__field {
-  cursor: pointer; }
+/*.select2-container--default .select2-search--inline .select2-search__field {*/
+/*  cursor: pointer; }*/
 
-.select2-container--default .select2-container--focus {
-  border: none !important; }
+/*.select2-container--default .select2-container--focus {*/
+/*  border: none !important; }*/
 
 .categorySelector .hide {
   display: none; }
