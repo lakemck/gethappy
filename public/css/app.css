@@ -6164,6 +6164,10 @@ h2 {
     font-weight: 100;
     font-size: 1em; }
 
+.hiddenFields.totesHidden{
+  display:none;
+}
+
 #aboutPage {
   display: -webkit-flex;
   display: -ms-flexbox;
