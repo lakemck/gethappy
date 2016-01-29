@@ -41,10 +41,17 @@
         <![endif]-->
     <nav class="mynav" role="navigation">
 <!--       <div class="container"> -->
-          <a class="navbar-brand" href="{{URL::to('/')}}">
-          <span class="headerImage">
-<img src="{{URL::to('images/happyfacetinyblue.png')}}" class="logoImage" alt=""></span>
-          </a>
+         <a class="navbar-brand" href="{{URL::to('/')}}">
+            <span class="headerImage">
+                <img src="{{URL::to('images/happyfacetinyblue.png')}}" class="logoImage" alt="">
+            </span>
+         </a>
+         <div class="socialMedia">
+             <ul>
+                 <li><a class="socialMediaLink" href="https://www.facebook.com/gethappynz"><i class="fa fa-facebook"></i></a></li>
+                 <li><a class="socialMediaLink" href="https://www.twitter.com/gethappynz"><i class="fa fa-twitter"></i></a></li>
+             </ul>
+         </div>
         <div class="navButton">
           <button type="button" class="hamburger">
 <!--             <span class="sr-only">Toggle navigation</span> -->
