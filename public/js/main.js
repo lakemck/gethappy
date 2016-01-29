@@ -5,23 +5,9 @@ $(function(){
         $('#sortContainer').mixItUp();
 
         $('.categorySelector, .distanceSelector').hide();
-        // .selection will hide select2
     $('#fakeSelect, #fakeSelect3').on('click touch', function(){
 
         $('.categorySelector').slideToggle( "fast" );
-        // $( 'select2-open' ).click();
-
-            // if($('.categorySelector').css('display') == 'none')
-            // {
-            //             $(this).css('margin-bottom','10px');
-            // }else{
-
-            //             $(this).css('margin-bottom','0');
-
-            //         };
-
-
-        // $('#categories').attr('size',3);
 
     });
 
@@ -29,29 +15,7 @@ $(function(){
 
         $('.distanceSelector').slideToggle( "fast" );
 
-            // if($('.distanceSelector:visible').length == 0)
-            // {
-            //             $('#fakeSelect2').css('margin-bottom','10px');
-            // }else{
-
-            //             $('#fakeSelect2').css('margin-bottom','0');
-
-            //         };
-
-        // $('#distances').attr('size',3);
-
     });
-
-// SELECT2 STUFF
-
-  // $('#categoryList').select2({
-  //   placeholder: "CATEGORY",
-  // formatSelectionCssClass: function (data, container) { return "myCssClass"; },
-  // });
-  // $('#dayList').select2({
-  //   placeholder: "DAY",
-  // formatSelectionCssClass: function (data, container) { return "myCssClass"; },
-  // });
 
     $('.select2-selection--multiple').eq(1).addClass('daySelect');
     $('.select2-selection--multiple').eq(0).addClass('catSelect');
@@ -75,7 +39,7 @@ $(function(){
 
     $('.detailsButton').on('click touch', function(){
 
-        $('.mapContainer').css('left','400px');
+        $('.mapContainer').css('left','-400px');
            if($(this).hasClass('pressed')){
 
                 $('.mapButton').removeClass('pressed');
@@ -87,7 +51,6 @@ $(function(){
 
 
             $(this).parent().siblings(".details").show("slide", 100, "linear");
-            // $(this).parent().siblings(".mapContainer").hide("slide", 100, "linear");
             };
 
 
