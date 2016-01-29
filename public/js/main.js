@@ -1,6 +1,6 @@
 $(function(){
 
-    // $(".select2-search, .select2-focusser").remove();
+    $(".select2-search, .select2-focusser, .select2-search--inline ").remove();
 
     $('.categorySelector, .distanceSelector').hide();
         
