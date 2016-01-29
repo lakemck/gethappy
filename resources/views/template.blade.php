@@ -27,7 +27,6 @@
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
         <meta name="theme-color" content="#ffffff">
         <link href="{{URL::to('css/select2.css')}}" rel="stylesheet" />
-        <script src="{{URL::to('js/select2.js')}}"></script>
 <!--         <link href="{{URL::to('bower_components/dist/css/select2.min.css')}}" rel="stylesheet">
  -->        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <!--         <link rel="stylesheet" href="css/bootstrap.min.css"> -->
@@ -88,6 +87,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBWBBPv_XC5CpL6F7mfyLTMFfs9dj1cfYQ&signed_in=true&libraries=places"></script>
 {!! HTML::script('js/infobubble.js'); !!}
+<script src="{{URL::to('js/select2.js')}}"></script>
 <script src="https://cdn.jsdelivr.net/jquery.mixitup/2.1.11/jquery.mixitup.min.js"></script>
 <script type="text/javascript" src="{{ URL::asset('js/main.js') }}"></script>
 
