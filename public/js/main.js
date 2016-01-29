@@ -1,11 +1,5 @@
 $(function(){
 
-	$('#sortContainer').mixItUp();
-
-});
-
-$(function(){
-
     $('.categorySelector, .distanceSelector').hide();
         
     $('#fakeSelect, #fakeSelect3').on('click touch', function(){
@@ -169,6 +163,12 @@ $(function(){
 
     });
 
+	// $('#sortContainer').mixItUp();
+$('#sortContainer').mixItUp({
+	selectors: {
+		filter: '.sort'
+	}
+});
 });
 
 // $('#submitButton').hover(function(){
