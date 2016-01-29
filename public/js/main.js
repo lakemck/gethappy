@@ -19,7 +19,7 @@ $(function(){
     
 $('#sortContainer').mixItUp({
     load: {
-      sort: 'year:desc name:asc'
+      sort: 'rating:desc distance:asc'
     }
 });
 
