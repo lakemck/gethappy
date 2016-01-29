@@ -1,5 +1,7 @@
 $(function(){
 
+    $(".select2-search, .select2-focusser").remove();
+
     $('.categorySelector, .distanceSelector').hide();
         
     $('#fakeSelect, #fakeSelect3').on('click touch', function(){
