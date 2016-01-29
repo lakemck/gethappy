@@ -1,6 +1,6 @@
 $(function(){
 
-	$('#Container').mixItUp();
+	$('#sortContainer').mixItUp();
 
 });
 
