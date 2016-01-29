@@ -2,8 +2,8 @@ $(function(){
 
     $(".select2-search, .select2-focusser, .select2-search--inline ").remove();
     
-    $(".placeHolderText p:first").text('category');
-      $(".placeHolderText p:last").text('day');
+    $(".placeHolderText").eq(0).text('category');
+      $(".placeHolderText").eq(1).text('day');
 
     $('.categorySelector, .distanceSelector').hide();
         
