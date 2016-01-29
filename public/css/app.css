@@ -6805,6 +6805,9 @@ select, option {
   .mainLogoImage{
     display: none;
   }
+  .logo{
+    margin-top: 0;
+  }
   
 }    
   
