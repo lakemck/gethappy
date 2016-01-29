@@ -31,6 +31,7 @@
  -->        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <!--         <link rel="stylesheet" href="css/bootstrap.min.css"> -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
         <link href="{{URL::to('css/app.css')}}" rel="stylesheet" media="screen, projection">
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 @yield('styles')
@@ -82,14 +83,15 @@
 <!--       <footer> -->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBWBBPv_XC5CpL6F7mfyLTMFfs9dj1cfYQ&signed_in=true&libraries=places"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>
-<script type="text/javascript" src="{{ URL::asset('js/main.js') }}"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBWBBPv_XC5CpL6F7mfyLTMFfs9dj1cfYQ&signed_in=true&libraries=places"></script>
 {!! HTML::script('js/infobubble.js'); !!}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>
 <script src="https://cdn.jsdelivr.net/jquery.mixitup/2.1.11/jquery.mixitup.min.js"></script>
+<script type="text/javascript" src="{{ URL::asset('js/main.js') }}"></script>
+
+
 
 
 <!--       </footer> -->
