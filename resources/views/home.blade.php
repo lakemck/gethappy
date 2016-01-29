@@ -32,24 +32,8 @@
       <div id="geolocationButton" class="geolocationSearch"><span>or</span> Use My Location <i class="fa fa-location-arrow"></i></div>
 
       <div class="hiddenFields">
-<!--         <div id="fakeSelect">
-          <span id="fakeSelectText">TYPE</span>
-          <div class="arrow"><i class="fa fa-chevron-down"></i></div>
-        </div> -->
-<!--         {!! Form::label('Categories','TYPE') !!} -->
         {!! Form::select('categoryList[]', $categories, null, ['placeholder' => 'TYPE', 'class' => 'categorySelector', 'id' => 'categoryList', 'multiple']) !!}
       {!! $errors->first('category','<p class="error">:message</p>')!!}
-
-        <!-- <div id="fakeSelect2">
-          <span id="fakeSelectText">DISTANCE</span>
-          <div class="arrow"><i class="fa fa-chevron-down"></i></div>
-        </div>
-        {!! Form::select('distance', ['2' => 'Short Walk', '100' => 'City Wide', '1000' => 'NZ'], null, ['class' => 'distanceSelector', 'size' => '3']) !!} -->
-
-<!--         <div id="fakeSelect2">
-          <span id="fakeSelectText">DAY</span>
-          <div class="arrow"><i class="fa fa-chevron-down"></i></div>
-        </div> -->
         {!! Form::select('dayList[]', $days, null, ['class' => 'distanceSelector', 'id' => 'dayList', 'multiple']) !!}
       {!! $errors->first('day','<p class="error">:message</p>')!!}
 
@@ -69,7 +53,7 @@
 <script type="text/javascript">
 $('#categoryList').select2({
         placeholder: "CATEGORY",
-        minimumResultsForSearch: 10
+        minimumResultsForSearch: -1
       });
   $('#dayList').select2({
     placeholder: "DAY",
