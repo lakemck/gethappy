@@ -79,6 +79,18 @@ $(function(){
 
     });
 
+
+    $('.sortButtons').hide();     
+
+      $('#showSortButton').on('click touch', function(){
+
+        $('.sortButtons').slideToggle( "fast" );
+
+    });
+
+});
+
+$(function(){
     $('.searchBoxes').hide();     
 
       $('#refineSearchButton').on('click touch', function(){
@@ -92,18 +104,7 @@ $(function(){
          }
 
     });
-
-    $('.sortButtons').hide();     
-
-      $('#showSortButton').on('click touch', function(){
-
-        $('.sortButtons').slideToggle( "fast" );
-
-    });
-
 });
-
-
 
 $(function(){
 $(".descriptionText, .fa-minus-square").hide();
