@@ -69,11 +69,12 @@
  POTENCH CHANGE SELECT TO THIS TYPE 
 <script type="text/javascript">
   $('#categoryList').select2({
-    placeholder: "CATEGORY"
+    placeholder: "CATEGORY",
+    minimumResultsForSearch: -1
   });
   $('#dayList').select2({
     placeholder: "DAY",
-  formatSelectionCssClass: function (data, container) { return "myCssClass"; },
+  minimumResultsForSearch: -1
   });
 </script>
 
