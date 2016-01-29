@@ -1812,6 +1812,7 @@ S2.define('select2/selection/search',[
         '<input tabindex="-1"' +
         ' autocomplete="off" autocorrect="off" autocapitalize="off"' +
         ' spellcheck="false" role="textbox" aria-autocomplete="list" style="display: none" />' +
+        '<p class="placeHolderText"></p>' +
       '</li>'
     );
 
