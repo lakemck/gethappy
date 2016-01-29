@@ -39,7 +39,7 @@ $(function(){
 
     $('.detailsButton').on('click touch', function(){
 
-        $('.mapContainer').css('left','-400px');
+        $('.mapContainer').css('left','0');
            if($(this).hasClass('pressed')){
 
                 $('.mapButton').removeClass('pressed');
