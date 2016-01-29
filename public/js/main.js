@@ -2,7 +2,7 @@ $(function(){
 
     $(".select2-search, .select2-focusser, .select2-search--inline ").remove();
     
-    $(".select2-container--default").text('category');
+    $(".select2-container--default li input").text('category');
 
     $('.categorySelector, .distanceSelector').hide();
         
