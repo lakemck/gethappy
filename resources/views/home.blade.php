@@ -51,6 +51,8 @@
 @section('footer')
 
 <script type="text/javascript">
+$(document).ready(function() {
+
 $('#categoryList').select2({
         placeholder: "CATEGORY",
         minimumResultsForSearch: Infinity
@@ -59,6 +61,9 @@ $('#categoryList').select2({
     placeholder: "DAY",
   minimumResultsForSearch: Infinity
   });
+
+});
+
 </script> 
 
 <script type="text/javascript" src="{{ URL::asset('js/geostuff.js') }}"></script>
