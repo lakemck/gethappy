@@ -1,5 +1,5 @@
 $('.hiddenFields').hide();
-$(".hiddenFields").removeClass("totesHidden");
+$(".hiddenFields").removeAttr('id');
 var input = document.getElementById('searchInput');
 var options = {
     types: [],
