@@ -169,8 +169,11 @@
               </div>
           </article>
         @endforeach
+
         @else
+
           <p>no search results</p>
+
         @endif
     </div>
  </div>
@@ -180,8 +183,6 @@
     <div id="map_canvas"></div>
 
   </div>
-
-     <!-- Example row of columns -->
 
 </section> 
 
@@ -430,10 +431,13 @@ function getInfoWindowDetails(location){
 
   $('#categoryList2').select2({
     placeholder: "CATEGORY",
+  minimumResultsForSearch: Infinity,
   formatSelectionCssClass: function (data, container) { return "myCssClass"; },
+
   });
   $('#dayList2').select2({
     placeholder: "DAY",
+    minimumResultsForSearch: Infinity,
   formatSelectionCssClass: function (data, container) { return "myCssClass"; },
   });
 

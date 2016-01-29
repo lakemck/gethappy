@@ -53,11 +53,11 @@
 <script type="text/javascript">
 $('#categoryList').select2({
         placeholder: "CATEGORY",
-        minimumResultsForSearch: -1
+        minimumResultsForSearch: Infinity
       });
   $('#dayList').select2({
     placeholder: "DAY",
-  minimumResultsForSearch: -1
+  minimumResultsForSearch: Infinity
   });
 </script> 
 

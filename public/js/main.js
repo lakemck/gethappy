@@ -5,6 +5,7 @@ $(function(){
         $('#sortContainer').mixItUp();
 
         $('.categorySelector, .distanceSelector').hide();
+        
     $('#fakeSelect, #fakeSelect3').on('click touch', function(){
 
         $('.categorySelector').slideToggle( "fast" );
