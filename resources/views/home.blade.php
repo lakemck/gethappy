@@ -49,7 +49,18 @@
 </section> <!-- /container -->        
 @stop
 @section('footer')
- 
+
+<script type="text/javascript">
+$('#categoryList').select2({
+        placeholder: "CATEGORY",
+        minimumResultsForSearch: -1
+      });
+  $('#dayList').select2({
+    placeholder: "DAY",
+  minimumResultsForSearch: -1
+  });
+</script> 
+
 <script type="text/javascript" src="{{ URL::asset('js/geostuff.js') }}"></script>
 
 @stop
