@@ -6329,9 +6329,9 @@ h2 {
 .select2-container--default .select2-container--focus {
   border: none !important; }
   
-.no-search .select2-search {
-    display:none
-}
+/*.no-search .select2-search {*/
+/*    display:none*/
+/*}*/
 
 .categorySelector .hide {
   display: none; }
