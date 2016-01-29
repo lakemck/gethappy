@@ -16,6 +16,12 @@ $(function(){
 
     $('.select2-selection--multiple').eq(1).addClass('daySelect');
     $('.select2-selection--multiple').eq(0).addClass('catSelect');
+    
+$('#sortContainer').mixItUp({
+    load: {
+      sort: 'year:desc name:asc'
+    }
+});
 
 });
 
@@ -163,12 +169,6 @@ $(function(){
 
     });
 
-	// $('#sortContainer').mixItUp();
-$('#sortContainer').mixItUp({
-	selectors: {
-		filter: '.sort'
-	}
-});
 });
 
 // $('#submitButton').hover(function(){
