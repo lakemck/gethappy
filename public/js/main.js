@@ -1,10 +1,12 @@
 $(function(){
 
-    // Instantiate MixItUp:
+	$('#Container').mixItUp();
 
-        $('#sortContainer').mixItUp();
+});
 
-        $('.categorySelector, .distanceSelector').hide();
+$(function(){
+
+    $('.categorySelector, .distanceSelector').hide();
         
     $('#fakeSelect, #fakeSelect3').on('click touch', function(){
 
