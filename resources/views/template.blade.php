@@ -46,15 +46,8 @@
                 <img src="{{URL::to('images/happyfacetinyblue.png')}}" class="logoImage" alt="">
             </span>
          </a>
-         <div class="socialMedia">
-             <ul>
-                 <li><a class="socialMediaLink" href="https://www.facebook.com/gethappynz"><i class="fa fa-facebook"></i></a></li>
-                 <li><a class="socialMediaLink" href="https://www.twitter.com/gethappynz"><i class="fa fa-twitter"></i></a></li>
-             </ul>
-         </div>
         <div class="navButton">
           <button type="button" class="hamburger">
-<!--             <span class="sr-only">Toggle navigation</span> -->
             <span class="iconBar"></span>
             <span class="iconBar"></span>
             <span class="iconBar"></span>
@@ -65,8 +58,14 @@
             <li class="active"><a href="{{URL::to('/')}}">HOME</a></li>
             <li><a href="{{URL::to('/about')}}">ABOUT</a></li>
           </ul>  
-        </div><!--/.navbar-collapse -->
-<!--       </div> -->
+        </div>
+         <div class="socialMedia">
+             <ul>
+                 <li><a class="socialMediaLink" href="https://www.facebook.com/gethappynz"><i class="fa fa-facebook"></i></a></li>
+                 <li><a class="socialMediaLink" href="https://www.twitter.com/gethappynz"><i class="fa fa-twitter"></i></a></li>
+             </ul>
+         </div>
+
       @if(Auth::check())
         <div class="adminStuff">
           <h4>Hi {{Auth::user()->name}}!</h4>
