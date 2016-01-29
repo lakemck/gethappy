@@ -6303,6 +6303,10 @@ h2 {
     font-weight: 700;
     transition: .3s all ease; }
 
+.select2-container .select2-search--inline{
+  float: none;
+}    
+
 .select2-container--default .select2-selection--multiple.daySelect {
   border: none;
   background-image: url("../images/chevron2blue.png"), url("../images/calendar.png");
