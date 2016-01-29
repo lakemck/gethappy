@@ -17,8 +17,8 @@ $(function(){
 
     });
 
-    $('.select2-selection--multiple').eq(1).addClass('daySelect');
-    $('.select2-selection--multiple').eq(0).addClass('catSelect');
+    // $('.select2-selection--multiple').eq(1).addClass('daySelect');
+    // $('.select2-selection--multiple').eq(0).addClass('catSelect');
 
 });
 
