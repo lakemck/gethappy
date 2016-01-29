@@ -54,6 +54,7 @@
 
 $('#categoryList').select2({
         minimumResultsForSearch: -1,
+        dropdownCssClass : 'no-search',
         placeholder: "CATEGORY"
 
       });
