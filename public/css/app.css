@@ -6426,8 +6426,7 @@ select, option {
   top: 50px;
   overflow-y: auto;
   height: 100%;
-  background-color: #3398DA;
-  z-index: -100; }
+  background-color: #3398DA;}
 
 #refineSearchButton {
   margin: 0 auto;
@@ -6724,7 +6723,7 @@ select, option {
   height: 100%;
   position: absolute;
   top: 50px;
-  left: 400px;
+  left: 0px;
   z-index: -100; }
 
 #map_canvas {
