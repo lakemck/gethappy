@@ -5,9 +5,16 @@ $(function () {
     var val = $(this).val();
     if(val === "") {
         $(".placeHolderText").eq(0).text('category');
+    }else{
+        $(".placeHolderText").eq(0).hide();
+    }
+});
+  $("#dayList").change(function() {
+    var val = $(this).val();
+    if(val === "") {
         $(".placeHolderText").eq(1).text('day');
     }else{
-        $(".placeHolderText").hide();
+        $(".placeHolderText").eq(1).hide();
     }
 });
 
