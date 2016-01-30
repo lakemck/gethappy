@@ -18,7 +18,7 @@ $(function () {
     }
 });
 
-    if($(#dayList2).val("")) {
+    if($("#dayList2").val("")) {
         $(".placeHolderText").eq(1).text('day');
     }else{
         $(".placeHolderText").eq(1).hide();
