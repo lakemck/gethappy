@@ -24,6 +24,13 @@ $('#dayList2 option').each(function() {
         $(".placeHolderText").eq(1).text('day');
     }
 });
+$('#categoryList2 option').each(function() {
+    if(this.selected) {
+        $(".placeHolderText").eq(0).hide();
+    }else{
+        $(".placeHolderText").eq(0).text('day');
+    }
+});
 // $(function(){
 
 //     $(".select2-search, .select2-focusser, .select2-search--inline ").remove();
