@@ -1,7 +1,7 @@
 $(function () {
         $(".placeHolderText").eq(0).text('category');
         $(".placeHolderText").eq(1).text('day');
-  $("#categoryList").change(function() {
+  $("#categoryList, #categoryList2").change(function() {
     var val = $(this).val();
     if(val === "") {
         $(".placeHolderText").eq(0).text('category');
@@ -9,7 +9,7 @@ $(function () {
         $(".placeHolderText").eq(0).hide();
     }
 });
-  $("#dayList").change(function() {
+  $("#dayList, #dayList2").change(function() {
     var val = $(this).val();
     if(val === "") {
         $(".placeHolderText").eq(1).text('day');
