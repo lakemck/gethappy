@@ -1,15 +1,29 @@
-$(function(){
-
-    $(".select2-search, .select2-focusser, .select2-search--inline ").remove();
-   
-   if(!$('#categoryList').val()){
-
+$(function () {
         $(".placeHolderText").eq(0).text('category');
         $(".placeHolderText").eq(1).text('day');
-
- }else{
+  $("#categoryList").change(function() {
+    var val = $(this).val();
+    if(val === "") {
+        $(".placeHolderText").eq(0).text('category');
+        $(".placeHolderText").eq(1).text('day');
+    }
         $(".placeHolderText").hide();
     }
+  });
+});
+
+// $(function(){
+
+//     $(".select2-search, .select2-focusser, .select2-search--inline ").remove();
+   
+//   if(!$('#categoryList').val()){
+
+//         $(".placeHolderText").eq(0).text('category');
+//         $(".placeHolderText").eq(1).text('day');
+
+//  }else{
+//         $(".placeHolderText").hide();
+//     }
     
     $('.categorySelector, .distanceSelector').hide();
         
