@@ -2,11 +2,13 @@ $(function(){
 
     $(".select2-search, .select2-focusser, .select2-search--inline ").remove();
    
-   if($(".select2-selection__rendered li").hasClass("select2-selection__choice")){ 
-        $(".placeHolderText").hide();
-    }else{
+   if(!$('#categoryList').val()){
+
         $(".placeHolderText").eq(0).text('category');
         $(".placeHolderText").eq(1).text('day');
+
+ }else{
+        $(".placeHolderText").hide();
     }
     
     $('.categorySelector, .distanceSelector').hide();
