@@ -1,10 +1,11 @@
 $(function(){
 
     $(".select2-search, .select2-focusser, .select2-search--inline ").remove();
-    
+   
+   if(!$(li).hasClass(.select2-selection__choice)){ 
     $(".placeHolderText").eq(0).text('category');
       $(".placeHolderText").eq(1).text('day');
-
+}
     $('.categorySelector, .distanceSelector').hide();
         
     $('#fakeSelect, #fakeSelect3').on('click touch', function(){
