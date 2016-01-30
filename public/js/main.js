@@ -17,11 +17,11 @@ $(function () {
         $(".placeHolderText").eq(1).hide();
     }
 });
-
-    if($("#dayList2").val("")) {
-        $(".placeHolderText").eq(1).text('day');
-    }else{
+$('#dayList2 option').each(function() {
+    if(this.selected) {
         $(".placeHolderText").eq(1).hide();
+    }else{
+        $(".placeHolderText").eq(1).text('day');
     }
 
 // $(function(){
