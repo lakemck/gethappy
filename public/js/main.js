@@ -6,7 +6,7 @@ $(function () {
     if(val === "") {
         $(".placeHolderText").eq(0).text('category');
         $(".placeHolderText").eq(1).text('day');
-    }
+    }else{
         $(".placeHolderText").hide();
     }
 });
