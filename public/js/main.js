@@ -18,6 +18,12 @@ $(function () {
     }
 });
 
+    if($(#dayList2).val("")) {
+        $(".placeHolderText").eq(1).text('day');
+    }else{
+        $(".placeHolderText").eq(1).hide();
+    }
+
 // $(function(){
 
 //     $(".select2-search, .select2-focusser, .select2-search--inline ").remove();
