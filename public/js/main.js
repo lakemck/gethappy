@@ -23,7 +23,7 @@ $('#dayList2 option').each(function() {
     }else{
         $(".placeHolderText").eq(1).text('day');
     }
-
+});
 // $(function(){
 
 //     $(".select2-search, .select2-focusser, .select2-search--inline ").remove();
