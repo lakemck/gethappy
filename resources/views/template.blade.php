@@ -70,8 +70,8 @@
       @if(Auth::check())
         <div class="adminStuff">
           <h4>Hi {{Auth::user()->name}}!</h4>
-          <a href="{{URL::to('/articles/show')}}" class="adminLinks">ADMIN HUB</a>
-          <a href="{{URL::to('/auth/logout')}}" class="adminLinks">LOGOUT</a>
+          <a href="{{URL::to('/articles/show')}}" class="adminLinks" target="blank">ADMIN HUB</a>
+          <a href="{{URL::to('/auth/logout')}}" class="adminLinks" target="blank">LOGOUT</a>
         </div>  
       @endif
     </nav>
