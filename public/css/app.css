@@ -6619,7 +6619,8 @@ select, option {
   position: relative; }
 
 .coverTrans{
-  rgba(51, 152, 218, .3);
+  color: rgba(51, 152, 218, .3);
+  background-color: rgba(51, 152, 218, .3);
   height: 70px;
   position: absolute;
   width: 100%;
