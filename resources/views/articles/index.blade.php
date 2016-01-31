@@ -60,6 +60,7 @@
         @foreach ($articles as $article)
           <article class="barContainer mix category-<?php echo $article->id; ?>" data-rating="<?php echo $article->rating; ?>" data-distance="<?php echo $article->distance; ?>">
              <div class="resultImageContainer">
+                <div class="coverTrans"></div>     
                 <div class="resultImage">
         @if ($article->image != '')          
                 {!! HTML::image('images/'.$article->image, $article->image) !!}  
