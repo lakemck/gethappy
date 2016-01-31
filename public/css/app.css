@@ -6087,6 +6087,7 @@ h2 {
   position: absolute;
   top: 50px;
   right: 0px;
+  border: solid 2px #3398DA;
 }
 
 .hamburger {
