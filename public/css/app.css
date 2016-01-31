@@ -6618,6 +6618,16 @@ select, option {
   overflow: hidden;
   position: relative; }
 
+.distanceRight{
+  position: absolute;
+  top: 32px;
+  right: 10px;
+  background-color: #339949;
+  color: #3398DA;
+  border: 2px solid #339949;
+  border-radius: 50%;
+}
+
 .daytypeContainer {
   height: 45px;
   width: 100%;
