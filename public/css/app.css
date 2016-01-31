@@ -6078,13 +6078,16 @@ h2 {
 
 .homeMenu.show {
   display: block;
-  float: right;
-  background-color: rgba(51, 152, 218, 0.8);
+  background-color: rgba(51, 152, 218, 1);
   color: #F1C40F;
   padding: 10px;
   text-align: center;
   min-width: 200px;
-  z-index: 1000; }
+  z-index: 1000;
+  position: absolute;
+  top: 50px;
+  right: 0px;
+}
 
 .hamburger {
   float: right;
