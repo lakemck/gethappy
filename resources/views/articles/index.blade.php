@@ -78,6 +78,7 @@
                </div> 
         
                 <div class="showMoreDetails" onclick="myClick(<?php echo $key; ?>);"><i class="fa fa-plus-square"></i><i class="fa fa-minus-square"></i></div>
+                </h2><h4 class="distance"><?php echo $kms ?> km</h4> 
               </div>
               <div class="dealText">
                       @if ($article->deal != "" ) 
