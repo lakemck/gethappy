@@ -6618,7 +6618,7 @@ select, option {
   overflow: hidden;
   position: relative; }
 
-.transCover{
+.coverTrans{
   rgba(51, 152, 218, .3);
   height: 70px;
   position: absolute;
