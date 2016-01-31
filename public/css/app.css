@@ -6334,9 +6334,8 @@ h2 {
 /*}*/
 
 .placeHolderText{
-   /*position: absolute;*/
-   /* left:50%;*/
-   /* margin-left:-100px;*/
+  margin-bottom: 0;
+  margin-top: 5px;
 }
 
 .categorySelector .hide {
