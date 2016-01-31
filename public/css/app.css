@@ -6618,6 +6618,13 @@ select, option {
   overflow: hidden;
   position: relative; }
 
+.transCover{
+  rgba(51, 152, 218, .3);
+  height: 70px;
+  position: absolute;
+  width: 100%;
+}
+
 .distanceRight{
   position: absolute;
   top: 32px;
