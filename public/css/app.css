@@ -6087,7 +6087,9 @@ h2 {
   position: absolute;
   top: 50px;
   right: 0px;
-  border: solid 2px #F1C40F;
+  border-left: solid 2px #F1C40F;
+  border-right: solid 2px #F1C40F;
+  border-bottom: solid 2px #F1C40F;
 }
 
 .hamburger {
