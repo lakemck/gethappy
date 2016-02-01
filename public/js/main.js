@@ -6,7 +6,7 @@ $(function () {
     if(val === "") {
         $(".placeHolderText").eq(0).text('category');
     }else{
-        $(".placeHolderText").eq(0).css( "opcaity", "0.5" );;
+        $(".placeHolderText").eq(0).hide();
     }
 });
   $("#dayList, #dayList2").change(function() {
