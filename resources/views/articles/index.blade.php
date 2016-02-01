@@ -418,7 +418,7 @@ function getInfoWindowDetails(location){
                             '<h3 id="firstHeading" class="infoWindowTitle">' + barTitle[i] + '</h3>'+
                                 '<div class="infoDeal">'+ barDeal[i] + '</div>'+
                                 '<div class="infoDistance">'+ barDistance[i] + 'km' + '</div>'+
-                                '<a href="http://maps.google.com/maps?saddr=<?php echo $googDestLat.','.$googDestLng; ?>&daddr=<?php echo $startLat.','.$startLng; ?>" target="blank" class="getDirectionsLink">' + "GET DIRECTIONS" + '</a>'+
+                                '<div class="directionsLinkMap"><a href="http://maps.google.com/maps?saddr=<?php echo $googDestLat.','.$googDestLng; ?>&daddr=<?php echo $startLat.','.$startLng; ?>" target="blank" class="getDirectionsLink">' + "GET DIRECTIONS" + '</a></div>'+
                               '</div>';
         return contentString;
     }
