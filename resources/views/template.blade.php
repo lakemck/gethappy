@@ -90,7 +90,7 @@
 <script src="{{URL::to('js/select2.js')}}"></script>
 <script src="https://cdn.jsdelivr.net/jquery.mixitup/2.1.11/jquery.mixitup.min.js"></script>
   <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
-  <script>tinymce.init({ selector:'textarea' });</script>
+  <script>tinymce.init({ selector:'textarea', encoding: 'xml' });</script>
 <script type="text/javascript" src="{{ URL::asset('js/main.js') }}"></script>
 
 
