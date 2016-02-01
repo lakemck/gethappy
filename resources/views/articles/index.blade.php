@@ -134,13 +134,8 @@
               <div class="descriptionTextContainer">
                 
                 <div class="descriptionText">
-                  <p>{{$article->description}}</p>
-        <!--           <div class="addressContainer">
-                    <p class="streetText">{{$article->address}}</p>
-                  </div> -->
+                  {{$article->description}}
               @if(Auth::check())
-        
-                <h4>{{Auth::user()->firstname}}</h4>
                 <p>{!! link_to_route('articleEdit_path', 'EDIT PLACE', [$article->id])!!}</p>
               @endif
                   <div class="deetsContainer">
