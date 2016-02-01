@@ -6816,9 +6816,9 @@ select, option {
   overflow: hidden; }
   
   .directionsLinkMap{
-    float: right;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    position: absolute;
+    right: 5px;
+    bottom: 0;
     
   }
 
