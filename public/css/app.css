@@ -6814,6 +6814,13 @@ select, option {
   line-height: 1.2em;
   padding: 10px;
   overflow: hidden; }
+  
+  .directionsLinkMap{
+    float: right;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+  }
 
 .formContainer {
   margin-top: 90px; }
