@@ -35,7 +35,7 @@
         <link href="{{URL::to('css/app.css')}}" rel="stylesheet" media="screen, projection">
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
   <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
-  <script>tinymce.init({ selector:'textarea' });</script>
+  <script>tinymce.init({ selector:'textarea', entity_encoding : "raw", element_format : 'html' });</script>
 
 @yield('styles')
     </head>
