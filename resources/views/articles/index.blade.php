@@ -134,7 +134,7 @@
               <div class="descriptionTextContainer">
                 
                 <div class="descriptionText">
-                  {{$article->description}}
+                  {!! $article->description !!}
               @if(Auth::check())
                 <p>{!! link_to_route('articleEdit_path', 'EDIT PLACE', [$article->id])!!}</p>
               @endif
