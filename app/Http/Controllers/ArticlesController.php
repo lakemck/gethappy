@@ -187,7 +187,7 @@ public function index(Request $request)
 
 
         $image_name = $request->file('image')->getClientOriginalName();
-        $request->file('image')->move(base_path().'/images', $image_name);
+        $request->file('image')->move(base_path().'/public/images', $image_name);
         $article = ($request->except(['image']));
         $article['image'] = $image_name; 
 
@@ -261,7 +261,7 @@ public function index(Request $request)
         $article = Article::find($id);
 
          if( $request->hasFile('image') ){
-            $path = base_path().'/images';
+            $path = base_path().'/public/images';
             // $file = Image::make(input::file('pic'));
             $file = $request->input('image');
                         // $file->fit(120,90);
