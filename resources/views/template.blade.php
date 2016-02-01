@@ -92,11 +92,6 @@
   <!--<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>-->
   <!--<script>tinymce.init({ selector:'textarea', encoding: 'xml' });</script>-->
   <script src="//cdn.ckeditor.com/4.5.6/basic/ckeditor.js"></script>
-              <script>
-                // Replace the <textarea id="editor1"> with a CKEditor
-                // instance, using default configuration.
-                CKEDITOR.replace( '#description' );
-            </script>
 <script type="text/javascript" src="{{ URL::asset('js/main.js') }}"></script>
 
 
