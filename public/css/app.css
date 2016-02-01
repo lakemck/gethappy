@@ -6619,14 +6619,6 @@ select, option {
   overflow: hidden;
   position: relative; }
 
-.coverTrans{
-  color: rgba(51, 152, 218, .3);
-  background-color: rgba(51, 152, 218, .3);
-  height: 70px;
-  position: absolute;
-  width: 100%;
-}
-
 .distanceRight{
   position: absolute;
   top: 32px;
@@ -6634,8 +6626,8 @@ select, option {
   color: #3398DA;
   font-family: 'Roboto', sans-serif;
   font-weight: 900;
-  font-size: .8em;
-  text-shadow: 2px 2px rgba(0, 0, 0, 0.6);
+  font-size: .9em;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.6);
 }
 
 .daytypeContainer {
