@@ -96,7 +96,7 @@
                       @endif  
               </div>
               <div class="daytypeContainer">
-        
+                <?php $days = $days->sortBy('id'); ?>      
                 <ul id="dayIcons">
                   @foreach ($article->days as $day)
                       @if($day->dayname == 'Monday')
