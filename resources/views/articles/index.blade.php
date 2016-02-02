@@ -56,7 +56,6 @@
         date_default_timezone_set('Pacific/Auckland');
         // Prints something like: Monday
         $today = date("l");
-        $articles = $articles->sortBy('distance');
         ?>
         @foreach ($articles as $article)
           <article class="barContainer mix category-<?php echo $article->id; ?>" data-rating="<?php echo $article->rating; ?>" data-distance="<?php echo $article->distance; ?>">
