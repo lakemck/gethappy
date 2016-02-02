@@ -17,7 +17,7 @@
         <div class="refineArrow"><i class="fa fa-chevron-down"></i></div>
     </div> 
 
-  <div class="row searchBoxes">
+  <div class="row searchBoxes totesHidden">
 
     {!! Form::model($formdata, ['method' => 'GET', 'id' => 'searchForm', 'name' => 'searchForm', 'route' => 'articles_path']) !!}
 
