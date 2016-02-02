@@ -50,22 +50,22 @@
     </div>
     
     <div class="results" id="sortContainer">
-        @if ($articles->count())
-        <?php
+@if ($articles->count())
+<?php
         // set the default timezone to use. 
-        date_default_timezone_set('Pacific/Auckland');
+date_default_timezone_set('Pacific/Auckland');
         // Prints something like: Monday
-        $today = date("l");
-        ?>
-        @foreach ($articles as $article)
+$today = date("l");
+?>
+@foreach ($articles as $article)
           <article class="barContainer mix category-<?php echo $article->id; ?>" data-rating="<?php echo $article->rating; ?>" data-distance="<?php echo $article->distance; ?>">
              <div class="resultImageContainer">
                 <div class="resultImage">
-        @if ($article->image != '')          
+@if ($article->image != '')          
                 {!! HTML::image('images/'.$article->image, $article->image) !!}  
-        @else 
+@else 
                         <img src="{{URL::to('images/gd.jpg')}}" alt="">  
-        @endif
+@endif
                 </div>
         <?php $kms = round($article->distance, 1, PHP_ROUND_HALF_UP); ?>    
         <!-- CREATE AN ARRAY OF IDS THEN GET THE INDEX/KEY OF THIS PARTICULAR ARTICLE ID -->
