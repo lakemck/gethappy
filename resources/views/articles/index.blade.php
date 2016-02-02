@@ -64,7 +64,7 @@
         @if ($article->image != '')          
                 {!! HTML::image('images/'.$article->image, $article->image) !!}  
         @else 
-                <img src="{{URL::to('images/gd.jpg')}}" alt="">  
+                        <img src="{{URL::to('images/gd.jpg')}}" alt="">  
         @endif
                 </div>
         <?php $kms = round($article->distance, 1, PHP_ROUND_HALF_UP); ?>    
@@ -75,7 +75,6 @@
                     
                <div class="resultsTitle showMoreDetails" onclick="myClick(<?php echo $key; ?>);">
                   <h2>{{$article->title}}</h2>
-                  <!--<h4 class="distance">km</h4> -->
                </div> 
         
                 <div class="showMoreDetails" onclick="myClick(<?php echo $key; ?>);"><i class="fa fa-plus-square"></i><i class="fa fa-minus-square"></i></div>
@@ -218,6 +217,18 @@ var barDistance = [
         "<?php echo $infoKms; ?>" ,
         @endforeach
         ];    
+var barLat = [
+        @foreach($articles as $article)
+            <?php $googDestLat2 = $article->lat; ?> 
+        "<?php echo $googDestLat2; ?>" ,
+        @endforeach
+        ];     
+var barLng = [
+        @foreach($articles as $article)
+            <?php $googDestLng2 = $article->lng; ?> 
+        "<?php echo $googDestLng2; ?>" ,
+        @endforeach
+        ];   
 
 var infoWindowContent = [];
 var markers = [];
@@ -415,7 +426,7 @@ function getInfoWindowDetails(location){
                             '<h3 id="firstHeading" class="infoWindowTitle">' + barTitle[i] + '</h3>'+
                                 '<div class="infoDeal">'+ barDeal[i] + '</div>'+
                                 '<div class="infoDistance">'+ barDistance[i] + 'km' + '</div>'+
-                                '<div class="directionsLinkMap"><a href="http://maps.google.com/maps?saddr=<?php echo $googDestLat.','.$googDestLng; ?>&daddr=<?php echo $startLat.','.$startLng; ?>" target="blank" class="getDirectionsLink">'+"GO"+'<i class="fa fa-location-arrow"></i></a></div>'+
+                                '<div class="directionsLinkMap"><a href="http://maps.google.com/maps?saddr='+ barLat[i] + ',' + barLng[i] + &daddr=<?php echo $startLat.','.$startLng; ?>" target="blank" class="getDirectionsLink">'+"GO"+'<i class="fa fa-location-arrow"></i></a></div>'+
                               '</div>';
         return contentString;
     }
