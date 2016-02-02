@@ -76,7 +76,7 @@ $('#geolocationButton').on('click', function(event){
   };
   var geoError = function(error) {
     console.log('Error occurred. Error code: ' + error.code);
-    alert("Hello! Your location settings mean we can't find where you are. Please turn them on, or use the 'Enter address option");
+    alert("Hello! Your location settings mean we can't find where you are. Please turn them on, or use the 'ENTER A LOCATION' option. Chur!");
     // error.code can be:
     //   0: unknown error
     //   1: permission denied
