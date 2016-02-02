@@ -26,7 +26,6 @@ else if(!$('#searchInput').val()){
  }
 
  else{
-
     var address = $('#searchInput').val();
     geocoder = new google.maps.Geocoder();
     geocoder.geocode({
@@ -39,10 +38,8 @@ else if(!$('#searchInput').val()){
             $('#lng').val(lng);
           $('#searchForm').submit();
 
-        } 
-        else {
-            // $( ".searchFormErrors" ).show('fast').delay(2000).slideUp(300);
-    console.log('geo didn;t work yo');
+        } else {
+            $( ".searchFormErrors" ).show('fast').delay(2000).slideUp(300);
         } 
     });
 
@@ -77,6 +74,7 @@ $('#geolocationButton').on('click', function(event){
   };
   var geoError = function(error) {
     console.log('Error occurred. Error code: ' + error.code);
+    alert("Hello! Your location settings mean we can't find where you are. Please turn them on, or use the 'Enter address option");
     // error.code can be:
     //   0: unknown error
     //   1: permission denied
