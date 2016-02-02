@@ -42,7 +42,7 @@ else if(!$('#searchInput').val()){
         } 
         else {
             // $( ".searchFormErrors" ).show('fast').delay(2000).slideUp(300);
-    console.log(geo didn;t work yo');
+    console.log('geo didn;t work yo');
         } 
     });
 
