@@ -210,12 +210,12 @@ var barDeal = [
               @else
                 "No Deals ATM" ,
               @endif
-
         @endforeach
         ];
 var barDistance = [
         @foreach($articles as $article)
-        "<?php echo $kms; ?>" ,
+        <?php $infoKms = round($article->distance, 1, PHP_ROUND_HALF_UP); ?>
+        "<?php echo $infoKms; ?>" ,
         @endforeach
         ];    
 
