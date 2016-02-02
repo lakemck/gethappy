@@ -59,12 +59,13 @@ $('#searchInput').change(function ()
 // USE USERS LOCATION
 
 $('#geolocationButton').on('click', function(event){
-    $('#searchInput').toggleClass('geo');
-    $('#searchInput').slideToggle( "fast" );
-
   var startPos;
   var geoSuccess = function(position) {
+    //   IF GEOLOCATION IS ON, HIDE ADDRESS INPUT AND SHOW HIDDEN FIELDS.
+    $('#searchInput').toggleClass('geo');
+    $('#searchInput').slideToggle( "fast" );
     $('.hiddenFields').slideToggle("fast");
+    
     startPos = position;
     var lat = startPos.coords.latitude;
     $('#lat').val(lat);
