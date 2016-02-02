@@ -42,7 +42,7 @@
         <span id="fakeSelectText">SORT BY</span>
         <div class="refineArrow"><i class="fa fa-sort"></i></div>
     </div> 
-    <div class="button-group sort-by-button-group row sortButtons">
+    <div class="button-group sort-by-button-group row sortButtons totesHidden">
       
 <!-- MIX IT UP -->
       <button class="sort sortDistance" data-sort="distance:asc"><i class="fa fa-location-arrow"></i> Distance</button>
