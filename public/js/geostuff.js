@@ -61,9 +61,10 @@ $('#searchInput').change(function ()
 $('#geolocationButton').on('click', function(event){
     $('#searchInput').toggleClass('geo');
     $('#searchInput').slideToggle( "fast" );
-    $('.hiddenFields').slideToggle("fast");
+
   var startPos;
   var geoSuccess = function(position) {
+    $('.hiddenFields').slideToggle("fast");
     startPos = position;
     var lat = startPos.coords.latitude;
     $('#lat').val(lat);
