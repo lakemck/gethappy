@@ -166,26 +166,18 @@ $today = date("l");
         
               </div>
           </article>
-        @endforeach
-
-        @else
-
+@endforeach
+@else
           <p>no search results</p>
-
         @endif
     </div>
  </div>
-
-  <div class="mapContainer">
-    
-    <div id="map_canvas"></div>
-
+ <div class="mapContainer">
+     <div id="map_canvas"></div>
   </div>
-
 </section> 
-
-
 @stop
+
 @section('footer')
 <script type="text/javascript" src="{{ URL::asset('js/geostuff.js') }}"></script>
 <script>
