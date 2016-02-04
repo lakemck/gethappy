@@ -65,14 +65,17 @@ public function index(Request $request)
     // IF USER MAKES NO CATEGORY CHOICE SHOW ALL
     if(count($categoryChoice) == 0){
 
-       \Session::flash('flash_message', 'You Must Choose a Category'); 
-
-       return redirect()->back();
+// USER MUST CHOOSE SOMETHING
+    //   \Session::flash('flash_message', 'You Must Choose a Category'); 
+    //   return redirect()->back();
+    
+// SHOW ALL IF NO CHOICE IS MADE
+        $categoryChoice = Category::lists('id');
 
     }elseif(in_array(4, $categoryChoice)){
 
         $categoryChoice = Category::lists('id');
-// dd($categoryChoice);
+
     }else{
 
         $categoryChoice = $request->get('categoryList');
@@ -80,10 +83,12 @@ public function index(Request $request)
     }
 
     if(count($dayChoice) == 0){
-       
-       \Session::flash('flash_message', 'You Must Choose a Day'); 
-
-       return redirect()->back();
+// USER MUST CHOOSE SOMETHING       
+    //   \Session::flash('flash_message', 'You Must Choose a Day'); 
+    //   return redirect()->back();
+    
+// SHOW ALL IF NO CHOICE IS MADE
+            $dayChoice = Day::lists('id');
 
     }elseif(in_array(8, $dayChoice)){
 
