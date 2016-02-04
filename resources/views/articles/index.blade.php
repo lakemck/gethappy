@@ -144,7 +144,7 @@ $today = date("l");
                       <ul class="otherInfoIcons">
                         <li><i class="fa fa-smile-o"></i><p>{{$article->address}}</p></li>
                         @if($article->phone != "")
-                        <li><i class="fa fa-phone"></i><p>{{$article->phone}}</p></li>
+                        <li><i class="fa fa-phone"></i><a href="tel:{{$article->phone}}">{{$article->phone}</a></li>
                         @endif
                         @if($article->email != "")
                         <li><i class="fa fa-envelope-o"></i><p>{{$article->email}}</p></li>
