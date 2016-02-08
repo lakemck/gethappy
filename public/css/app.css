@@ -6397,6 +6397,7 @@ select, option {
 
 .searchSubmit {
   width: 200px;
+  color:#f1c40f;
   background: #3398da;
   background-image: -webkit-linear-gradient(top, #3398da, #5eaee2);
   background-image: -moz-linear-gradient(top, #3398da, #5eaee2);
