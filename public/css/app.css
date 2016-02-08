@@ -6397,17 +6397,27 @@ select, option {
 
 .searchSubmit {
   width: 200px;
-  background-color: #3398DA;
-  color: #F1C40F;
+  background: #3398da;
+  background-image: -webkit-linear-gradient(top, #3398da, #5eaee2);
+  background-image: -moz-linear-gradient(top, #3398da, #5eaee2);
+  background-image: -ms-linear-gradient(top, #3398da, #5eaee2);
+  background-image: -o-linear-gradient(top, #3398da, #5eaee2);
+  background-image: linear-gradient(to bottom, #3398da, #5eaee2);
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0px;
+  text-decoration: none;
   border: none;
   padding: 10px;
   font-weight: bold; }
   .searchSubmit:hover {
-    color: #3398DA;
-    background-color: #F1C40F;
-    transition: .3s all ease;
-    border: solid 2px #3398DA;
-    text-shadow: 1px 1px rgba(0, 0, 0, 0.3); }
+    background: #3cb0fd;
+    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    text-decoration: none; }
 
 #resultsPage {
   padding-left: 0;
