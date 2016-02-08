@@ -6552,13 +6552,14 @@ select, option {
 .sortDistance, .sortRating {
   width: 30%;
   padding: 3px;
-  background-color: #F1C40F; }
-
-.sortDistance {
-  color: #3398DA; }
-
-.sortRating {
-  color: #3398DA; }
+   background: #f1c40f;
+  background-image: -webkit-linear-gradient(top, #f1c40f, #f5d44f);
+  background-image: -moz-linear-gradient(top, #f1c40f, #f5d44f);
+  background-image: -ms-linear-gradient(top, #f1c40f, #f5d44f);
+  background-image: -o-linear-gradient(top, #f1c40f, #f5d44f);
+  background-image: linear-gradient(to bottom, #f1c40f, #f5d44f);
+  color: #3398DA;
+  text-decoration: none; }
 
 .sortRating.pressed, .sortDistance.pressed {
   background-color: white;
