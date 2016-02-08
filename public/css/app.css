@@ -6556,6 +6556,7 @@ select, option {
   margin: 0 auto;
   margin-bottom: 10px; 
   background: #f8e07f;
+  border: none;
   background-image: -webkit-linear-gradient(top, #f8e07f, #f1c40f);
   background-image: -moz-linear-gradient(top, #f8e07f, #f1c40f);
   background-image: -ms-linear-gradient(top, #f8e07f, #f1c40f);
