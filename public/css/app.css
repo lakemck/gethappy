@@ -6570,6 +6570,7 @@ select, option {
   text-decoration: none; }
 
 .sortRating.pressed, .sortDistance.pressed {
+  background-image: none;
   background-color: white;
   color: #3398DA; }
 
