@@ -6445,11 +6445,17 @@ select, option {
   width: 50%;
   max-width: 200px;
   padding: 10px;
-  background-color: #3398DA;
-  color: #F1C40F;
+  background: #5eaee2;
+  background-image: -webkit-linear-gradient(top, #5eaee2, #3398DA);
+  background-image: -moz-linear-gradient(top, #5eaee2, #3398DA);
+  background-image: -ms-linear-gradient(top, #5eaee2, #3398DA);
+  background-image: -o-linear-gradient(top, #5eaee2, #3398DA);
+  background-image: linear-gradient(to bottom, #5eaee2, #3398DA);
+  color: #3398DA;
+  border: solid #f1c40f 2px;
+  text-decoration: none;
   text-align: center;
-  cursor: pointer;
-  border: 2px solid #F1C40F;}
+  cursor: pointer;}
 
 .mapButton {
   width: 50%;
@@ -6459,13 +6465,30 @@ select, option {
   top: 0;
   margin: 0 auto;
   padding: 10px;
-  background-color: #3398DA;
-  color: #F1C40F;
+  background: #5eaee2;
+  background-image: -webkit-linear-gradient(top, #5eaee2, #3398DA);
+  background-image: -moz-linear-gradient(top, #5eaee2, #3398DA);
+  background-image: -ms-linear-gradient(top, #5eaee2, #3398DA);
+  background-image: -o-linear-gradient(top, #5eaee2, #3398DA);
+  background-image: linear-gradient(to bottom, #5eaee2, #3398DA);
+  color: #3398DA;
+  border: solid #f1c40f 2px;
+  text-decoration: none;
   text-align: center;
-  cursor: pointer;
-  border: 2px solid #F1C40F;}
+  cursor: pointer;}
+  
+  .deatilsButton:hover: mapButton:hover{
+  background: #3398DA;
+  background-image: -webkit-linear-gradient(top, #3398DA, #7bbce7);
+  background-image: -moz-linear-gradient(top, #3398DA, #7bbce7);
+  background-image: -ms-linear-gradient(top, #3398DA, #7bbce7);
+  background-image: -o-linear-gradient(top, #3398DA, #7bbce7);
+  background-image: linear-gradient(to bottom, #3398DA, #7bbce7);
+  text-decoration: none; 
+  }
 
 .mapButton.pressed, .detailsButton.pressed {
+  background-image: none;
   background-color: white;
   color: #3398DA;}
 
