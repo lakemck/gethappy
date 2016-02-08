@@ -6560,6 +6560,14 @@ select, option {
   background-image: linear-gradient(to bottom, #f1c40f, #f5d44f);
   color: #3398DA;
   text-decoration: none; }
+.sortDistance:hover, .sortRating:hover{
+ background: #f8e07f;
+  background-image: -webkit-linear-gradient(top, #f8e07f, #f1c40f);
+  background-image: -moz-linear-gradient(top, #f8e07f, #f1c40f);
+  background-image: -ms-linear-gradient(top, #f8e07f, #f1c40f);
+  background-image: -o-linear-gradient(top, #f8e07f, #f1c40f);
+  background-image: linear-gradient(to bottom, #f8e07f, #f1c40f);
+  text-decoration: none; }
 
 .sortRating.pressed, .sortDistance.pressed {
   background-color: white;
