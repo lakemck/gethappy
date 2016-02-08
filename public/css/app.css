@@ -6395,7 +6395,7 @@ h2 {
 select, option {
   text-align: center; }
 
-.searchSubmit, .refineSearchSubmit {
+.searchSubmit {
   width: 200px;
   color:#f1c40f;
   background: #3398da;
@@ -6551,8 +6551,27 @@ select, option {
     padding-top: 5px; }
 
 .refineSearchSubmit {
+  width: 200px;
+  padding: 10px;
   margin: 0 auto;
-  margin-bottom: 10px; }
+  margin-bottom: 10px; 
+  background: #f8e07f;
+  background-image: -webkit-linear-gradient(top, #f8e07f, #f1c40f);
+  background-image: -moz-linear-gradient(top, #f8e07f, #f1c40f);
+  background-image: -ms-linear-gradient(top, #f8e07f, #f1c40f);
+  background-image: -o-linear-gradient(top, #f8e07f, #f1c40f);
+  background-image: linear-gradient(to bottom, #f8e07f, #f1c40f);
+  text-decoration: none;
+  color: #3398DA;
+  text-decoration: none; }
+.refineSearchSubmit:hover{
+ background: #f1c40f;
+  background-image: -webkit-linear-gradient(top, #f1c40f, #f5d44f);
+  background-image: -moz-linear-gradient(top, #f1c40f, #f5d44f);
+  background-image: -ms-linear-gradient(top, #f1c40f, #f5d44f);
+  background-image: -o-linear-gradient(top, #f1c40f, #f5d44f);
+  background-image: linear-gradient(to bottom, #f1c40f, #f5d44f);
+  text-decoration: none; }
 
 .sortButtons {
   width: 100%;
