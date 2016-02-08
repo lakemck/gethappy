@@ -6395,7 +6395,7 @@ h2 {
 select, option {
   text-align: center; }
 
-.searchSubmit {
+.searchSubmit, .refineSearchSubmit {
   width: 200px;
   color:#f1c40f;
   background: #3398da;
@@ -6551,20 +6551,8 @@ select, option {
     padding-top: 5px; }
 
 .refineSearchSubmit {
-  width: 200px;
-  background-color: #F1C40F;
-  color: #3398DA;
-  border: none;
-  padding: 10px;
-  font-weight: bold;
   margin: 0 auto;
   margin-bottom: 10px; }
-  .refineSearchSubmit:hover {
-    color: #3398DA;
-    background-color: #F1C40F;
-    transition: .3s all ease;
-    border: solid 2px #F1C40F;
-    text-shadow: 1px 1px rgba(0, 0, 0, 0.3); }
 
 .sortButtons {
   width: 100%;
