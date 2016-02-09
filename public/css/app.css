@@ -6755,7 +6755,8 @@ select, option {
   background-color: white; }
 
 .descriptionText {
-  padding: 10px; }
+  padding: 10px;
+  border-bottom: 2px solid #F1C40F;}
   .descriptionText p {
     color: #333333; }
 
