@@ -177,6 +177,14 @@ $(".descriptionText, .fa-minus-square").hide();
 
 });
 
+if($('.resultsImageContainer').hasClass('justTitle')){
+
+        $('.barContainer').css('border-bottom','2px solid #F1C40F');
+
+    }else{
+        $('.barContainer').css('border','none');   
+    });
+
 
 });
 
