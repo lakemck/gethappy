@@ -6426,7 +6426,7 @@ select, option {
   margin-left: 0;}
 
 .barContainer {
-  border-top: 2px solid #F1C40F;
+  /*border-top: 2px solid #F1C40F;*/
   width: 100%; }
 
 .viewButtons {
