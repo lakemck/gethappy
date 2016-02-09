@@ -183,7 +183,7 @@ if($('.resultsImageContainer').hasClass('justTitle')){
 
     }else{
         $('.barContainer').css('border','none');   
-    });
+    };
 
 
 });
