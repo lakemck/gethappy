@@ -6653,7 +6653,7 @@ select, option {
       margin: 0; }
   .resultImageContainer .fa-plus-square, .resultImageContainer .fa-minus-square {
     position: absolute;
-    top: 5px;
+    top: 15px;
     right: 10px;
     font-size: 2em;
     color: #F1C40F;
@@ -6675,7 +6675,7 @@ select, option {
 
 .distanceRight{
   position: absolute;
-  top: 32px;
+  top: 40px;
   right: 10px;
   color: #3398DA;
   font-family: 'Roboto', sans-serif;
