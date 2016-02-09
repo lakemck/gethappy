@@ -6633,7 +6633,7 @@ select, option {
   position: relative; }
   .resultImageContainer .resultsTitle {
     position: absolute;
-    top: 10px;
+    top: 15px;
     left: 10px;
     display: inline-block;
     width: 85%; }
@@ -6664,7 +6664,8 @@ select, option {
       transition: ease all 0.2s; }
 
 .resultImage img {
-  width: 100%; }
+  width: 100%;
+  min-height: 200px;}
 
 .resultImageContainer.justTitle {
   width: 100%;
@@ -6686,7 +6687,11 @@ select, option {
 .daytypeContainer {
   height: 60px;
   width: 100%;
-  background-color: #F1C40F; }
+  background-color: #F1C40F;
+  border-bottom: 1px solid #3398DA;
+  border-left: 1px solid #3398DA;
+  border-right: 1px solid #3398DA;
+  }
   .daytypeContainer #dayIcons {
     line-height: 60px;
     padding-left: 20px;
@@ -6757,7 +6762,8 @@ select, option {
 .dealText {
   height: 40px;
   background-color: white;
-  text-align: center; }
+  text-align: center;
+  border: 1px solid #3398DA;}
   .dealText p {
     line-height: 40px;
     text-align: center;
