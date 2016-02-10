@@ -6129,7 +6129,8 @@ h2 {
   height: 40px; }
   
 .developmentMode{
-  
+  margin: 0 auto;
+  text-align: center;
   width: 70%;
   color: #3398DA;
   
