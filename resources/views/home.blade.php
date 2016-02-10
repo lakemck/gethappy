@@ -1,7 +1,7 @@
 @extends('template')
 
 @section('content')
-
+<div class="FlexContainerWrapper">
 <section class="container" id="frontpage">
   <div class="row logo">      
       <div class="mainLogoImage">
@@ -49,7 +49,8 @@
 
      <!-- Example row of columns -->
 
-</section> <!-- /container -->        
+</section> <!-- /container -->    
+</div>
 @stop
 @section('footer')
 
