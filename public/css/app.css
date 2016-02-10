@@ -5872,6 +5872,12 @@ html, body{
   height: 100%;
 }
 
+.FlexContainerWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 #frontpage {
   display: -webkit-flex;
   display: -ms-flexbox;
