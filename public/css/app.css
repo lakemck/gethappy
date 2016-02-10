@@ -6127,6 +6127,13 @@ h2 {
 .logoImage {
   width: 40px;
   height: 40px; }
+  
+.developmentMode{
+  
+  width: 70%;
+  color: #3398DA;
+  
+}
 
 #frontpage {
   display: -webkit-flex;
