@@ -31,19 +31,7 @@ $('#categoryList2 option').each(function() {
         $(".placeHolderText").eq(0).text('day');
     }
 });
-// $(function(){
 
-//     $(".select2-search, .select2-focusser, .select2-search--inline ").remove();
-   
-//   if(!$('#categoryList').val()){
-
-//         $(".placeHolderText").eq(0).text('category');
-//         $(".placeHolderText").eq(1).text('day');
-
-//  }else{
-//         $(".placeHolderText").hide();
-//     }
-    
     $('.categorySelector, .distanceSelector').hide();
         
     $('#fakeSelect, #fakeSelect3').on('click touch', function(){
