@@ -42,6 +42,9 @@
       {!! Form::close() !!}
     </div>
   </div>
+  <div class="row">
+    <h4>*In development. May be some bugs.</h4>
+  </div>
 
 
      <!-- Example row of columns -->
