@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="FlexContainerWrapper">
-<section class="container" id="frontpage">
+<div class="container" id="frontpage">
   <div class="row logo">      
       <div class="mainLogoImage">
   
@@ -49,7 +49,7 @@
 
      <!-- Example row of columns -->
 
-</section> <!-- /container -->    
+</div> <!-- /container -->    
 </div>
 @stop
 @section('footer')
