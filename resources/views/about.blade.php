@@ -17,7 +17,7 @@
   </div>
   <div class="row aboutText col-md-4">
     <h3></h3>
-    <p>Get Happy is a deal finder based in NZ. We administer the site ourselves and do our best to make sure the deals are current. Unfortunately establishments change their offers regularly so there may be errors on our site. We take no responsibility for out of date deals and encourage consumers to contact the establishment to confirm deals beforehand. We also take no responsibility for the content and legality of any of the deals advertised on this site. We just share what is already publicly available.</p>
+    <p>Get Happy is a deal finder based in NZ. The site is currently loaded only with deals, discounts and things to do in Wellington & Auckland. We administer the site ourselves and do our best to make sure the deals are current. Unfortunately establishments change their offers regularly so there may be errors on our site. We take no responsibility for out of date deals and encourage consumers to contact the establishment to confirm deals beforehand. We also take no responsibility for the content and legality of any of the deals advertised on this site. We just share what is already publicly available.</p>
     <p>Should you have any deals, please send us an email at <span>gethappynz@gmail.com</span></p>
   </div>
 
