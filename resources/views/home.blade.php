@@ -6,7 +6,7 @@
   <div class="row logo">      
       <div class="mainLogoImage">
   
-        <img src="{{URL::to('images/happyfacesmallblue.png')}}" alt="">  
+        <img src="{{URL::to('images/happyfacesmallblue.png')}}" alt="Happy Hour Auckland">  
 
       </div>
 
@@ -43,7 +43,7 @@
     </div>
   </div>
   <div class="row developmentMode">
-    <p>*In development. May be some bugs.</h4>
+    <p>*Just Auckland & Wellington atm</h4>
   </div>
 
 
