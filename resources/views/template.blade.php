@@ -6,8 +6,8 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Get Happy</title>
-        <meta name="description" content="NZ's best happy hour and deal finder">
+        <title>Get Happy: Cheap things to do, discounts, happy hours</title>
+        <meta name="description" content="Find deals on restaurants, cheap beer & wine, and great things to do in Auckland in Wellington. Plus happy hours and discounts near you tonight.">
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
         <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
