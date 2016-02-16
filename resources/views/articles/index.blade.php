@@ -62,7 +62,7 @@ $today = date("l");
              <div class="resultImageContainer">
                 <div class="resultImage">
 @if ($article->image != '')          
-                {!! HTML::image('images/'.$article->image, $article->image) !!}  
+                {!! HTML::image('images/'.$article->image, $article->title) !!}  
 @else 
                         <img src="{{URL::to('images/gd.jpg')}}" alt="">  
 @endif
