@@ -47,7 +47,7 @@
 <!--       <div class="container"> -->
          <a class="navbar-brand" href="{{URL::to('/')}}">
             <span class="headerImage">
-                <img src="{{URL::to('images/happyfacetinyblue.png')}}" class="logoImage" alt="">
+                <img src="{{URL::to('images/happyfacetinyblue.png')}}" class="logoImage" alt="happy hour">
             </span>
          </a>
         <div class="navButton">
