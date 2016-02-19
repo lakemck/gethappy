@@ -6388,7 +6388,8 @@ select, option {
     top: 15px;
     left: 10px;
     display: inline-block;
-    width: 90%; }
+    width: 90%;
+    cursor: pointer;}
     .resultImageContainer .resultsTitle h2 {
       color: #F1C40F;
       font-weight: 700;
