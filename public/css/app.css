@@ -6388,7 +6388,7 @@ select, option {
     top: 15px;
     left: 10px;
     display: inline-block;
-    width: 85%; }
+    width: 90%; }
     .resultImageContainer .resultsTitle h2 {
       color: #F1C40F;
       font-weight: 700;
@@ -6434,7 +6434,7 @@ select, option {
 .distanceRight{
   position: absolute;
   top: 40px;
-  right: 10px;
+  right: 0px;
   color: #3398DA;
   font-family: 'Roboto', sans-serif;
   font-weight: 900;
