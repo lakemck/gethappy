@@ -49,7 +49,7 @@
       <button class="sort sortRating" data-sort="rating:desc"><i class="fa fa-star"></i> Rating</button>
     </div>
     
-    <div class="results" id="sortContainer">
+    <div class="results" id="sortContainer" style="-webkit-overflow-scrolling: touch;>
 @if ($articles->count())
 <?php
         // set the default timezone to use. 
@@ -58,7 +58,7 @@ date_default_timezone_set('Pacific/Auckland');
 $today = date("l");
 ?>
 @foreach ($articles as $article)
-          <article class="barContainer mix category-<?php echo $article->id; ?>" data-rating="<?php echo $article->rating; ?>" data-distance="<?php echo $article->distance; ?> style="-webkit-overflow-scrolling: touch;">
+          <article class="barContainer mix category-<?php echo $article->id; ?>" data-rating="<?php echo $article->rating; ?>" data-distance="<?php echo $article->distance; ?>">
              <div class="resultImageContainer">
                 <div class="resultImage">
 @if ($article->image != '')          
