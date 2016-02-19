@@ -49,7 +49,7 @@
       <button class="sort sortRating" data-sort="rating:desc"><i class="fa fa-star"></i> Rating</button>
     </div>
     
-    <div class="results" id="sortContainer" style="-webkit-overflow-scrolling: touch;>
+    <div class="results" id="sortContainer" style="-webkit-overflow-scrolling: touch;">
 @if ($articles->count())
 <?php
         // set the default timezone to use. 
