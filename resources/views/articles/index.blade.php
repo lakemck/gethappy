@@ -58,7 +58,7 @@ date_default_timezone_set('Pacific/Auckland');
 $today = date("l");
 ?>
 @foreach ($articles as $article)
-          <article class="barContainer mix category-<?php echo $article->id; ?>" data-rating="<?php echo $article->rating; ?>" data-distance="<?php echo $article->distance; ?>">
+          <article class="barContainer mix category-<?php echo $article->id; ?>" data-rating="<?php echo $article->rating; ?>" data-distance="<?php echo $article->distance; ?> style="-webkit-overflow-scrolling: touch;">
              <div class="resultImageContainer">
                 <div class="resultImage">
 @if ($article->image != '')          
