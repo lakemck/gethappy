@@ -73,9 +73,9 @@ $today = date("l");
                     $artID = $article->id;  
                     $key= $something->search($artID); ?>
                     
-               <div class="resultsTitle showMoreDetails" onclick="myClick(<?php echo $key; ?>);"><i class="fa fa-plus-square"></i><i class="fa fa-minus-square"></i>
-                  <h2>{{$article->title}}</h2>
-                </h2><h4 class="distanceRight"><?php echo $kms ?> km</h4> 
+               <div class="resultsTitle showMoreDetails" onclick="myClick(<?php echo $key; ?>);">
+                  <div class="barTitleContainer"><h2>{{$article->title}}</h2></div><i class="fa fa-plus-square"></i><i class="fa fa-minus-square"></i>
+                <h4 class="distanceRight"><?php echo $kms ?> km</h4> 
               </div>
               <div class="dealText">
                       @if ($article->deal != "" ) 
