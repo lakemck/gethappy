@@ -6405,8 +6405,8 @@ select, option {
       margin: 0; }
   .resultImageContainer .fa-plus-square, .resultImageContainer .fa-minus-square {
     position: absolute;
-    top: 15px;
-    right: 10px;
+    top: 0px;
+    right: 0px;
     font-size: 2em;
     color: #F1C40F;
     cursor: pointer;
@@ -6424,6 +6424,12 @@ select, option {
   height: 200px;
   overflow: hidden;
   position: relative; }
+  
+.barTitleContainer{
+  
+  width: 90%;
+  
+}
 
 .distanceRight{
   position: absolute;
