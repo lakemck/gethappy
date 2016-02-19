@@ -77,6 +77,7 @@ $today = date("l");
                   <div class="barTitleContainer"><h2>{{$article->title}}</h2></div><i class="fa fa-plus-square"></i><i class="fa fa-minus-square"></i>
                 <h4 class="distanceRight"><?php echo $kms ?> km</h4> 
               </div>
+                </div>
               <div class="dealText">
                       @if ($article->deal != "" ) 
                         @if($article->rating == '1')
