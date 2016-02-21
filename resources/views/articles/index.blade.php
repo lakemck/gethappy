@@ -284,42 +284,41 @@ function initialize() {
  // DISTANCE STUFF
  // NEED THIS ID TO MATCH THE ID OF THE ARTICLE THAT IS CLICKED
 
-$(".getOriginForm").submit(function(event) { 
-          event.preventDefault();
-      var destLat = $(this).parent().find('.lat').val();
-      var destLng = $(this).parent().find('.lng').val();
-
-var startLat = <?php echo $startLat; ?>;
-var startLng = <?php echo $startLng; ?>;
-// var destLat = document.getElementById('lat');
-// var destLng = document.getElementById('lng');
-var startPoint = new google.maps.LatLng(parseFloat(startLat),parseFloat(startLng));
-var endPoint = new google.maps.LatLng(parseFloat(destLat),parseFloat(destLng));
+// $(".getOriginForm").submit(function(event) { 
+//           event.preventDefault();
+//       var destLat = $(this).parent().find('.lat').val();
+//       var destLng = $(this).parent().find('.lng').val();
 
 
-
-    directionsDisplay.setMap(map);
-
-    var printRoute = function () {
-        calculateAndDisplayRoute(directionsService, directionsDisplay);
-    };
+// // var destLat = document.getElementById('lat');
+// // var destLng = document.getElementById('lng');
+// var startPoint = new google.maps.LatLng(parseFloat(startLat),parseFloat(startLng));
+// var endPoint = new google.maps.LatLng(parseFloat(destLat),parseFloat(destLng));
 
 
-function calculateAndDisplayRoute(directionsService, directionsDisplay) {
-    directionsService.route({
-        origin: startPoint,
-        destination: endPoint,
-        travelMode: google.maps.TravelMode.DRIVING
-    }, function (response, status) {
-        if (status === google.maps.DirectionsStatus.OK) {
-            directionsDisplay.setDirections(response);
-        } else {
-            window.alert('Directions request failed due to ' + status);
-        }
-    });
-}
 
-    });
+//     directionsDisplay.setMap(map);
+
+//     var printRoute = function () {
+//         calculateAndDisplayRoute(directionsService, directionsDisplay);
+//     };
+
+
+// function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+//     directionsService.route({
+//         origin: startPoint,
+//         destination: endPoint,
+//         travelMode: google.maps.TravelMode.DRIVING
+//     }, function (response, status) {
+//         if (status === google.maps.DirectionsStatus.OK) {
+//             directionsDisplay.setDirections(response);
+//         } else {
+//             window.alert('Directions request failed due to ' + status);
+//         }
+//     });
+// }
+
+//     });
 
 
 
