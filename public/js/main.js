@@ -204,6 +204,16 @@ $(function(){
 
 });
 
+$(document).ready(
+
+  function() { 
+
+    $(".details").niceScroll();
+
+  }
+
+);
+
 // $('#submitButton').hover(function(){
 
 // (function pulse(){
