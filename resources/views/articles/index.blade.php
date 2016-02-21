@@ -280,53 +280,6 @@ function initialize() {
     @endforeach
     ];
 
-
- // DISTANCE STUFF
- // NEED THIS ID TO MATCH THE ID OF THE ARTICLE THAT IS CLICKED
-
-// $(".getOriginForm").submit(function(event) { 
-//           event.preventDefault();
-//       var destLat = $(this).parent().find('.lat').val();
-//       var destLng = $(this).parent().find('.lng').val();
-
-
-// // var destLat = document.getElementById('lat');
-// // var destLng = document.getElementById('lng');
-// var startPoint = new google.maps.LatLng(parseFloat(startLat),parseFloat(startLng));
-// var endPoint = new google.maps.LatLng(parseFloat(destLat),parseFloat(destLng));
-
-
-
-//     directionsDisplay.setMap(map);
-
-//     var printRoute = function () {
-//         calculateAndDisplayRoute(directionsService, directionsDisplay);
-//     };
-
-
-// function calculateAndDisplayRoute(directionsService, directionsDisplay) {
-//     directionsService.route({
-//         origin: startPoint,
-//         destination: endPoint,
-//         travelMode: google.maps.TravelMode.DRIVING
-//     }, function (response, status) {
-//         if (status === google.maps.DirectionsStatus.OK) {
-//             directionsDisplay.setDirections(response);
-//         } else {
-//             window.alert('Directions request failed due to ' + status);
-//         }
-//     });
-// }
-
-//     });
-
-
-
-
-
-
-// END DISTANCE STUFF
-
 for (i = 0; i < locations.length; i++) {
     infoWindowContent[i] = getInfoWindowDetails(locations[i]);
     var location = new google.maps.LatLng(locations[i][0], locations[i][1]);
