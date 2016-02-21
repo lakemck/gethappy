@@ -296,7 +296,7 @@ for (i = 0; i < locations.length; i++) {
       map: map,
       // content: '<div style="overflow: hidden;"><div>',
       // position: new google.maps.LatLng(-32.0, 149.0),
-      // minWidth: 200,
+       minWidth: 200,
       minHeight: 150,
       shadowStyle: 1,
       padding: 0,
