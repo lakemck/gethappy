@@ -27,3 +27,4 @@ public function register()
         $this->app->register('Laracasts\Generators\GeneratorsServiceProvider');
     }
 }
+}
