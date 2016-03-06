@@ -218,7 +218,7 @@ public function index(Request $request)
      */
     public function update(ArticleRequest $request, $id)
     {
-        $article = Article::findOrFail($id);
+        $article = Article::find($id);
 
          if( $request->hasFile('image') ){
             $path = base_path().'/public/images';
@@ -230,11 +230,11 @@ public function index(Request $request)
     }
 
     $article->update($request->all());
-       $dayID = Deal::all()->lists('dealname', 'dayID');
-       $dayID = $dayID->toArray();
+    //   $dayID = Deal::all()->lists('dealname', 'dayID');
+    //   $dayID = $dayID->toArray();
 
-    // $dealnames = $article->deals->dealname;
-    dd($dayID);
+    // // $dealnames = $article->deals->dealname;
+    // dd($dayID);
 
     for($i = 0; $i < sizeof($request->input('dealname')); $i++) {
         $article->deals->where('dayID',($i + 1))->first()->dealname = $request->input('dealname')[$i];
@@ -246,7 +246,7 @@ public function index(Request $request)
 
         $daysId = $request->input('dayList');
         $article->days()->sync($daysId);
-        // $article->save();
+
         return redirect('/');
 
     }
