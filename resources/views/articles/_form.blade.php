@@ -58,35 +58,35 @@
         </div>
         @endif
 
-@if($deal->dayID == '4')
-<div class="form-group">
-    {!! Form::label('dealname','Thursday') !!}
-    {!! Form::text('dealname[]', $deal->dealname, null, ['class' => 'form-control', 'id' => '4']) !!}
-</div>
-
-@endif
-
-
-@if($deal->dayID == '5' )
-<div class="form-group">
-    {!! Form::label('dealname','Friday') !!}
-    {!! Form::text('dealname[]', $deal->dealname, null, ['class' => 'form-control', 'id' => '5']) !!}
-</div>
-@endif
-
-@if($deal->dayID == '6' )
-<div class="form-group">
-    {!! Form::label('dealname','Saturday') !!}
-    {!! Form::text('dealname[]', $deal->dealname, null, ['class' => 'form-control', 'id' => '6']) !!}
-</div>
-@endif
-
-@if($deal->dayID == '7' )
-<div class="form-group">
-    {!! Form::label('dealname','Sunday') !!}
-    {!! Form::text('dealname[]', $deal->dealname, null, ['class' => 'form-control', 'id' => '7']) !!}
-</div>
-@endif
+        @if($deal->dayID == '4')
+        <div class="form-group">
+            {!! Form::label('dealname','Thursday') !!}
+            {!! Form::text('dealname[]', $deal->dealname, null, ['class' => 'form-control', 'id' => '4']) !!}
+        </div>
+        
+        @endif
+        
+        
+        @if($deal->dayID == '5' )
+        <div class="form-group">
+            {!! Form::label('dealname','Friday') !!}
+            {!! Form::text('dealname[]', $deal->dealname, null, ['class' => 'form-control', 'id' => '5']) !!}
+        </div>
+        @endif
+        
+        @if($deal->dayID == '6' )
+        <div class="form-group">
+            {!! Form::label('dealname','Saturday') !!}
+            {!! Form::text('dealname[]', $deal->dealname, null, ['class' => 'form-control', 'id' => '6']) !!}
+        </div>
+        @endif
+        
+        @if($deal->dayID == '7' )
+        <div class="form-group">
+            {!! Form::label('dealname','Sunday') !!}
+            {!! Form::text('dealname[]', $deal->dealname, null, ['class' => 'form-control', 'id' => '7']) !!}
+        </div>
+        @endif
 
 @endforeach
 
