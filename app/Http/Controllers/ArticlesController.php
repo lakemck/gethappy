@@ -238,8 +238,8 @@ public function index(Request $request)
 
     for($i = 0; $i < sizeof($request->input('dealname')); $i++) {
 
-            $deals = $request->input('dealname');
-            dd($deals);
+            // $deals = $request->input('dealname');
+            // dd($deals);
 
         $article->deals->where('dayID',($i + 1))->first()->dealname = $request->input('dealname')[$i];
         $article->deals->where('dayID',($i + 1))->first()->save();
