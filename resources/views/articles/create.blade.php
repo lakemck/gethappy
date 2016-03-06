@@ -139,8 +139,17 @@
 </div>
     {!! Form::close() !!}
 
-
   </div>
+@section ('footer')
+
+<script type="text/javascript">
+  $('select').select2();
+</script>
+
+@endsection
+
+@include ('errors.list')
+ 
 
 
      <!-- Example row of columns -->
