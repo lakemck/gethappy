@@ -232,10 +232,10 @@ public function index(Request $request)
 
 
     for($i = 0; $i < sizeof($request->input('dealname')); $i++) {
-        $article = Article::find($id);
+        // $article = Article::find($id);
 
-        $article->deals->where('dayID',($i + 1))->first()->dealname = $request->input('dealname')[$i];
-        $article->deals->where('dayID',($i + 1))->first()->save();
+        $article->deals->where('dayID',(1))->first()->dealname = $request->input('dealname')[$i];
+        $article->deals->where('dayID',(1))->first()->save();
 
 
         }
