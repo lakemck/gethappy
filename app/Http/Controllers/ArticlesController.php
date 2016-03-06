@@ -127,9 +127,7 @@ public function index(Request $request)
     public function create()
     {
 
-        // return \Auth::user();
         $categories = Category::lists('name', 'id');
-        // $days = Day::lists('dayname', 'id');
         $days = Day::lists('dayname', 'id');
         return view('articles.create', compact('categories', 'days'));
     }
