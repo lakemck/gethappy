@@ -22,11 +22,7 @@ class Article extends Model
             public function days()
         {
             return $this->belongsToMany('App\Day')->withTimestamps();
-        }
-
-    public function getDayListAttribute()
-        {
-            return $this->days->lists('id')->all();
+            
         }
         
     public function deals()
@@ -34,6 +30,12 @@ class Article extends Model
         return $this->hasMany('App\Deal');
         
     }  
+
+    public function getDayListAttribute()
+        {
+            return $this->days->lists('id')->all();
+        }
+        
 
     public function getDealListAttribute()
         {
