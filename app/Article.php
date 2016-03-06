@@ -28,6 +28,17 @@ class Article extends Model
         {
             return $this->days->lists('id')->all();
         }
+        
+    public function deals()
+    {
+        return $this->hasMany('App\Deal');
+        
+    }  
+
+    public function getDealListAttribute()
+        {
+            return $this->deals->lists('id')->all();
+        } 
 
     // public function city()
     // {
