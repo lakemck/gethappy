@@ -236,10 +236,23 @@ public function index(Request $request)
     // // $dealnames = $article->deals->dealname;
     // dd($dayID);
 
-    for($i = 0; $i < sizeof($request->input('dealname')); $i++) {
-        $article->deals->where('dayID',($i + 1))->first()->dealname = $request->input('dealname')[$i];
-        $article->deals->where('dayID',($i + 1))->first()->save();
-    }
+    // for($i = 0; $i < sizeof($request->input('dealname')); $i++) {
+    //     $article->deals->where('dayID',($i + 1))->first()->dealname = $request->input('dealname')[$i];
+    //     $article->deals->where('dayID',($i + 1))->first()->save();
+    // }
+   $article->deals->where('dayID',1)->first()->dealname = $request->input('dealname')[0];
+    $article->deals->where('dayID',1)->first()->save();
+    $article->deals->where('dayID',2)->first()->dealname = $request->input('dealname')[1];
+    $article->deals->where('dayID',2)->first()->save();
+    $article->deals->where('dayID',3)->first()->dealname = $request->input('dealname')[2];
+   $article->deals->where('dayID',4)->first()->dealname = $request->input('dealname')[3];
+    $article->deals->where('dayID',4)->first()->save();
+    $article->deals->where('dayID',5)->first()->dealname = $request->input('dealname')[4];
+    $article->deals->where('dayID',5)->first()->save();
+    $article->deals->where('dayID',6)->first()->dealname = $request->input('dealname')[5];
+    $article->deals->where('dayID',6)->first()->save();
+    $article->deals->where('dayID',7)->first()->dealname = $request->input('dealname')[6];
+    $article->deals->where('dayID',7)->first()->save();
 // TO UPDATE CATEGORIES
         $categoriesId = $request->input('categoryList');
         $article->categories()->sync($categoriesId);
