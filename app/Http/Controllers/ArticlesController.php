@@ -230,9 +230,11 @@ public function index(Request $request)
     }
 
     $article->update($request->all());
-$deals = $request->input('dealname');
+       $dayID = Deal::all()->lists('dealname', 'dayID');
+       $dayID = $dayID->toArray();
+
     // $dealnames = $article->deals->dealname;
-    dd($deals);
+    dd($dayID);
 
     for($i = 0; $i < sizeof($request->input('dealname')); $i++) {
         $article->deals->where('dayID',($i + 1))->first()->dealname = $request->input('dealname')[$i];
