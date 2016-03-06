@@ -115,7 +115,7 @@ public function index(Request $request)
         return redirect()->action('HomeController@index');
     }
 
-    return view('articles.index', compact('categories', 'articles', 'days', 'formdata', 'deals'))->with('startLat', $lat)->with('startLng', $lng)->with('chosenDay', $chosenDay);;
+    return view('articles.index', compact('categories', 'articles', 'days', 'formdata', 'deals'))->with('startLat', $lat)->with('startLng', $lng)->with('chosenDay', $chosenDay);
 
 }
 
@@ -247,7 +247,8 @@ public function index(Request $request)
         $daysId = $request->input('dayList');
         $article->days()->sync($daysId);
 
-        return redirect()->route('articles_path');
+        return redirect('/');
+
 
     }
 
