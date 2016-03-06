@@ -9,6 +9,7 @@ use App\Http\Requests\ArticleRequest;
 use App\Http\Controllers\Controller;
 use App\Category;
 use App\Day;
+use App\Deal;
 use Intervention\Image\Facades\Image;
 use App\Geocoder;
 use Auth;
@@ -47,6 +48,8 @@ public function index(Request $request)
     $categories = array(4=>'All') + Category::lists('name', 'id')->toArray();
     $lat = $request->get('lat');
     $lng = $request->get('lng');
+    $chosenDay = $request->get('dayList');
+    $deals = Deal::all()->lists('dealname', 'dayID')->toArray();
 
 // GET DISTANCE FROM USER
     // $distance = $request->get('distance');
@@ -58,7 +61,7 @@ public function index(Request $request)
 
     $categoryChoice = $request->get('categoryList');
 
-    $dayChoice = $request->get('dayList');
+    // $dayChoice = $request->get('dayList');
 
     // dd($categoryChoice);
 
@@ -82,41 +85,26 @@ public function index(Request $request)
         // dd($categoryChoice);
     }
 
-    if(count($dayChoice) == 0){
-// USER MUST CHOOSE SOMETHING       
-    //   \Session::flash('flash_message', 'You Must Choose a Day'); 
-    //   return redirect()->back();
-    
+    if(count($chosenDay) == 0){
 // SHOW ALL IF NO CHOICE IS MADE
-            $dayChoice = Day::lists('id');
+        $chosenDay = Day::lists('id');
 
-    }elseif(in_array(8, $dayChoice)){
-
-        $dayChoice = Day::lists('id');
-
+    }elseif(in_array(8, $chosenDay)){
+        $chosenDay = Day::lists('dayname', 'id');
+        $chosenDay = $chosenDay->toArray();
+        $chosenDay = array_keys($chosenDay);
     }else{
-
-        $dayChoice = $request->get('dayList');
-
+        $chosenDay = $request->get('dayList');
     }
-
 
     $query = Article::distance($lat, $lng, $distance)
         ->whereHas('categories', function ($query) use ($categoryChoice) {    
             $query->whereIn('categories.id', $categoryChoice);           
-        })->whereHas('days', function ($query) use ($dayChoice) {    
-            $query->whereIn('days.id', $dayChoice);           
+        })->whereHas('days', function ($query) use ($chosenDay) {    
+            $query->whereIn('days.id', $chosenDay);           
        })->get();
 
-// ->whereHas('days', function ($query) use ($dayChoice) {    
-//             $query->whereIn('days.id', $dayChoice);           
-//         })
-
-
-
      $articles = $query;   
-
-
 
     if(count($articles) == 0) 
     {
@@ -127,7 +115,7 @@ public function index(Request $request)
         return redirect()->action('HomeController@index');
     }
 
-    return view('articles.index', compact('categories', 'articles', 'days', 'formdata'))->with('startLat', $lat)->with('startLng', $lng);
+    return view('articles.index', compact('categories', 'articles', 'days', 'formdata', 'deals'))->with('startLat', $lat)->with('startLng', $lng)->with('chosenDay', $chosenDay);;
 
 }
 
@@ -158,39 +146,6 @@ public function index(Request $request)
     public function store(ArticleRequest $request)
     {
 
-        // $article = Article::create($request->all());      
-        // $fileName = $article['title']->getClientOriginalName();
-
-        // $image = Image::make($article['image']->getRealPath());
-
-        // $image->save(photo_path() . $article['image']->getClientOriginalName());
-
-        // $image = $request->file('image');
-        // $filename = $image->getClientOriginalName();
-        // $path = public_path('images/'.$filename);
-        // Image::make($image->getRealPath())->resize(200, 200)->save($path);
-
-
-        // // $aDetails = Input::all();
-        // $article->image = 'images/'.$filename;
-
-
-        // $file = $request->file('image');
-        // $fileName = $request->input('title').'.'.$file->getClientOriginalExtension();
-        // $fileName= str_replace(' ', '_', $fileName);
-        // $destinationPath    = 'images/';
-
-        // // upload new image
-        // Image::make($file->getRealPath())
-        // ->resize(300, 300) 
-        // ->save($destinationPath.$fileName);
-
-
-//         // $aDetails = Article::all();
-//         // $aDetails["image"] = $fileName;
-//         $article = Article::create($request->all());      
-
-
         $image_name = $request->file('image')->getClientOriginalName();
         $request->file('image')->move(base_path().'/public/images', $image_name);
         $article = ($request->except(['image']));
@@ -206,7 +161,20 @@ public function index(Request $request)
 
         $article->days()->attach($daysId);
 
+// GET INPUT
+        $deals = $request->input('dealname');
 
+// GET ID OF ARTICLE
+        $articleID = $article->id;
+// N is the day id that increments
+        $n = 1;
+
+        foreach($deals as $deal) {
+
+        Deal::create(['dealname' => $deal, 'article_id' => $articleID, 'dayID' => $n++]);
+
+        }   
+ 
 
         return redirect()->route('articles_path');
 
@@ -226,13 +194,6 @@ public function index(Request $request)
         return view('articles.show', compact('articles'));
     }
 
-// // BINDING EXAMPLE
-//     public function show(Article $article)
-//     {
-
-//         return view('articles.show', compact('article'));
-//     }
-
     /**
      * Show the form for editing the specified resource.
      *
@@ -242,17 +203,11 @@ public function index(Request $request)
     public function edit($id)
     {
         $article = Article::find($id);
+        $deals = Deal::all()->lists('dealname', 'dayID');
         $categories = Category::lists('name', 'id');
         $days = Day::lists('dayname', 'id');
-        return view('articles.edit', compact('article','categories', 'days'));
+        return view('articles.edit', compact('article','categories', 'days', 'deals'));
     }
-
-// // BINDING EXAMPLE
-//     public function edit(Article $article)
-//     {
-//         $categories = Category::lists('name', 'id');
-//         return view('articles.edit', compact('article'), compact('categories'));
-//     }
 
     /**
      * Update the specified resource in storage.
@@ -263,27 +218,23 @@ public function index(Request $request)
      */
     public function update(ArticleRequest $request, $id)
     {
-        $article = Article::find($id);
+        $article = Article::findOrFail($id);
 
          if( $request->hasFile('image') ){
             $path = base_path().'/public/images';
-            // $file = Image::make(input::file('pic'));
             $file = $request->input('image');
                         // $file->fit(120,90);
             $fileName = $request->file('image')->getClientOriginalName();
             $request->file('image')->move($path,$fileName);
-            // $students->original = $path."original/".$fileName;
-            //get the desire image size
-
-            // $file->save($path."fit/".$fileName);
             $article->image = $fileName; 
     }
 
+    $article->update($request->all());
 
-        $article->fill($request->input())->save();
-// TO EDIT PHOTO
-
-
+    for($i = 0; $i < sizeof($request->input('dealname')); $i++) {
+        $article->deals->where('dayID',($i + 1))->first()->dealname = $request->input('dealname')[$i];
+        $article->deals->where('dayID',($i + 1))->first()->save();
+    }
 // TO UPDATE CATEGORIES
         $categoriesId = $request->input('categoryList');
         $article->categories()->sync($categoriesId);
@@ -295,17 +246,6 @@ public function index(Request $request)
 
     }
 
-
-
-// // Binding example
-//    public function update(Article $article, Request $request )
-//     {
-
-//         $article->fill($request->input())->save();
-
-//         return redirect('articles');
-
-//     }
 
     /**
      * Remove the specified resource from storage.
