@@ -215,7 +215,7 @@ public function index(Request $request)
      */
     public function update(ArticleRequest $request, $id)
     {
-        $article = Article::findOrFail($id);
+        $article = Article::find($id);
 
          if( $request->hasFile('image') ){
             $path = base_path().'/public/images';
