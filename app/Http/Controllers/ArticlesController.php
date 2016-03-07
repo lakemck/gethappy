@@ -227,6 +227,10 @@ public function index(Request $request)
     }
 
     $article->update($request->all());
+    
+    $deal = $article->deals();
+
+    dd($deal);
 
 
     for($i = 0; $i < sizeof($request->input('dealname')); $i++) {
