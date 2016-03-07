@@ -234,17 +234,15 @@ public function index(Request $request)
 
 // }
 
-$deal = $article->whereHas('deals', function($query)
-{
-    $query->where('dayID', 4);
-})->get();
+// $deal = $article->whereHas('deals', function($query)
+// {
+//     $query->where('dayID', 4);
+// })->get();
 
-    // $deal = $article->deals->where('dayID', '=', 4);
+$deal = $article->deals->where('dayID', 4)->all();
 
     dd($deal);
-    // $deal = $article->deals;
 
-    // dd($deal);
 
     for($i = 0; $i < sizeof($request->input('dealname')); $i++) {
         // $article = Article::find($id);
