@@ -227,31 +227,11 @@ public function index(Request $request)
     }
 
     $article->update($request->all());
-// $article = Article::find(2);
-
-// foreach ($article->deals as $deal){
-// dd($deal->dealname); 
-
-// }
-
-// $deal = $article->whereHas('deals', function($query)
-// {
-//     $query->where('dayID', 4);
-// })->get();
-
-// $deal = $article->deals->where('dayID', 4)->all();
-
-//     dd($deal);
-
 
     for($i = 0; $i < sizeof($request->input('dealname')); $i++) {
-        // $article = Article::find($id);
-        // dd($article);
-  $deal = $article->deals()->where('dayID', $i + 1)->first();
+     $deal = $article->deals()->where('dayID', $i + 1)->first();
     $deal->dealname = $request->input('dealname')[$i];
     $deal->save();
-
-
         }
 
 // TO UPDATE CATEGORIES
