@@ -236,7 +236,7 @@ public function index(Request $request)
 
 $deal = $article->whereHas('deals', function($query)
 {
-    $query->where('dayID', 4);
+    $query->where('id', 175);
 })->get();
 
     // $deal = $article->deals->where('dayID', '=', 4);
