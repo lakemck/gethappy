@@ -234,10 +234,10 @@ public function index(Request $request)
 
 // }
 
-    $deal = $article->deals->where('dayID',(1));
+    $deal = $article->deals->where('day_id',(1));
 
-    var_dump($deal);
-    var_dump(DB::getQueryLog());
+    dd($deal);
+
 
     for($i = 0; $i < sizeof($request->input('dealname')); $i++) {
         // $article = Article::find($id);
