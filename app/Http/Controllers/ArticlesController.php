@@ -234,7 +234,7 @@ public function index(Request $request)
 
 // }
 
-    $deal = $article->deals->where('day_id',(1));
+    $deal = $article->deals->where('dayID',(1));
 
     dd($deal);
 
