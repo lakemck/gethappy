@@ -228,7 +228,8 @@ public function index(Request $request)
 
     $article->update($request->all());
     
-    $deal =  $request->input('dealname');
+$i = 0;
+    $deal = $article->deals->where('dayID',($i + 1));
 
     dd($deal);
 
