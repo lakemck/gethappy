@@ -239,16 +239,17 @@ public function index(Request $request)
 //     $query->where('dayID', 4);
 // })->get();
 
-$deal = $article->deals->where('dayID', 4)->all();
+// $deal = $article->deals->where('dayID', 4)->all();
 
-    dd($deal);
+//     dd($deal);
 
 
     for($i = 0; $i < sizeof($request->input('dealname')); $i++) {
         // $article = Article::find($id);
         // dd($article);
-        $article->deals->where('dayID',($i + 1))->first()->dealname = $request->input('dealname')[$i];
-        $article->deals->where('dayID',($i + 1))->first()->save();
+  $deal = $article->deals()->where('dayID', $i + 1)->first();
+    $deal->dealname = $request->input('dealname')[$i];
+    $deal->save();
 
 
         }
