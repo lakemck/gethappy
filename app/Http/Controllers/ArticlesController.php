@@ -229,9 +229,8 @@ public function index(Request $request)
     $article->update($request->all());
     
 $i = 0;
-    $deal = $article->deals->where('dayID',($i + 1));
-
-    dd($deal);
+ $dayID = Deal::all()->lists('dealname', 'dayID');
+ dd($dayID);
 
 
     for($i = 0; $i < sizeof($request->input('dealname')); $i++) {
