@@ -234,7 +234,12 @@ public function index(Request $request)
 
 // }
 
-    $deal = $article->deals->where('dayID', '=', 4);
+$deal = $article->whereHas('deals', function($query)
+{
+    $query->where('dayID', 4);
+})->get();
+
+    // $deal = $article->deals->where('dayID', '=', 4);
 
     dd($deal);
     // $deal = $article->deals;
