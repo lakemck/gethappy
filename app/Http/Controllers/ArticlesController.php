@@ -227,11 +227,13 @@ public function index(Request $request)
     }
 
     $article->update($request->all());
-    
-$i = 0;
-   $deal = $article->deals->where('dayID',(1))->first()->dealname;
+$article = Article::find(2);
 
-    dd($deal);
+foreach ($article->deals as $deal){
+dd($deal->dealname); 
+
+}
+
 
 
     for($i = 0; $i < sizeof($request->input('dealname')); $i++) {
