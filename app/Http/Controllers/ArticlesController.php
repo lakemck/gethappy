@@ -236,7 +236,8 @@ public function index(Request $request)
 
     $deal = $article->deals->where('dayID',(1));
 
-    dd($deal);
+    var_dump($deal);
+    var_dump(DB::getQueryLog());
 
     for($i = 0; $i < sizeof($request->input('dealname')); $i++) {
         // $article = Article::find($id);
