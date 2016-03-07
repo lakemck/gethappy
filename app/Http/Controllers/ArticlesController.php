@@ -234,12 +234,12 @@ public function index(Request $request)
 
 // }
 
-    // $deal = $article->deals->where('id',(180));
-
-    // dd($deal);
-    $deal = $article->deals;
+    $deal = $article->deals->where('dayID', '=', 4);
 
     dd($deal);
+    // $deal = $article->deals;
+
+    // dd($deal);
 
     for($i = 0; $i < sizeof($request->input('dealname')); $i++) {
         // $article = Article::find($id);
