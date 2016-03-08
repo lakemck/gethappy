@@ -6417,6 +6417,17 @@ select, option {
     .resultImageContainer .fa-plus-square:hover, .resultImageContainer .fa-minus-square:hover {
       color: #3398DA;
       transition: ease all 0.2s; }
+      
+      
+.onToday{
+    color: red;
+    font-weight: 700;
+    font-size: .8em;
+    text-transform: uppercase;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 0;
+    margin: 0;  
+}      
 
 .resultImage img {
   width: 100%;
