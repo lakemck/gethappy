@@ -79,7 +79,6 @@ $today = date("l");
               </div>
                 </div>
               <div class="dealText">
-                      @if (count($chosenDay) < 2 ) 
                         @if($article->rating == '1')
                           <p><i class='fa fa-star'></i></p>
                           @elseif($article->rating == '2')
@@ -87,6 +86,7 @@ $today = date("l");
                           @elseif($article->rating == '3')
                           <p><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i></p>
                         @endif
+                      @if (count($chosenDay) < 2 ) 
                         @foreach($article->deals as $deal)
         
         <!-- Match deal DayID with user inputted dayID -->
