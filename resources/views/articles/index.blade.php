@@ -51,12 +51,6 @@
     
     <div class="results" id="sortContainer" style="-webkit-overflow-scrolling: touch;">
 @if ($articles->count())
-<?php
-        // set the default timezone to use. 
-date_default_timezone_set('Pacific/Auckland');
-        // Prints something like: Monday
-$today = date("l");
-?>
 @foreach ($articles as $article)
           <article class="barContainer mix category-<?php echo $article->id; ?>" data-rating="<?php echo $article->rating; ?>" data-distance="<?php echo $article->distance; ?>">
              <div class="resultImageContainer">
@@ -76,6 +70,19 @@ $today = date("l");
                <div class="resultsTitle showMoreDetails" onclick="myClick(<?php echo $key; ?>);">
                   <div class="barTitleContainer"><h2>{{$article->title}}</h2></div><i class="fa fa-plus-square"></i><i class="fa fa-minus-square"></i>
                 <h4 class="distanceRight"><?php echo $kms ?> km</h4> 
+                  <h5 class="onToday">
+                 <?php 
+                   date_default_timezone_set('Pacific/Auckland');
+                  $today = date("l");
+            ?>  
+                    @foreach ($article->days as $day)
+        
+                      <?php   $dayArray = $day->dayname;  ?>
+                         @if($dayArray == $today )
+                          Today  
+                          @endif
+                    @endforeach         
+                  </h5>
               </div>
                 </div>
               <div class="dealText">
