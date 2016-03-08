@@ -79,7 +79,7 @@ $today = date("l");
               </div>
                 </div>
               <div class="dealText">
-                      @if ($article->deal != "" ) 
+                      @if (count($chosenDay) < 2 ) 
                         @if($article->rating == '1')
                           <p><i class='fa fa-star'></i></p>
                           @elseif($article->rating == '2')
@@ -87,28 +87,40 @@ $today = date("l");
                           @elseif($article->rating == '3')
                           <p><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i></p>
                         @endif
+                        @foreach($article->deals as $deal)
+        
+        <!-- Match deal DayID with user inputted dayID -->
+              <?php  $dealID = $deal->dayID ;  
+                    $dayKey= in_array($dealID, $chosenDay); ?>
+        
+                          @if($deal->dayID == $dayKey)
+                          <p>{{$deal->dealname}}</p>
+                          @endif
+        
+        
+                        @endforeach
+                    @else
                         <p>{{$article->deal}}</p>
-                      @else
-                        <p>No deals atm</p>
-                      @endif  
+        
+                    @endif  
               </div>
               <div class="daytypeContainer">
 
                 <ul id="dayIcons">
-                  @foreach ($article->days as $day)
-                      @if($day->dayname == 'Monday')
+                  @foreach ($article->deals as $deal)
+                      @if($deal->dayID == '1' && $deal->dealname != '')
                         <li><div class="dayCircle open"><p>M</p></div></li>
-                          @elseif ($day->dayname  == 'Tuesday')
+                          @elseif ($deal->dayID  == '2' && $deal->dealname != '')
                         <li><div class="dayCircle open"><p>Tu</p></div></li>
-                         @elseif ($day->dayname  == 'Wednesday')
+                         @elseif ($deal->dayID  == '3' && $deal->dealname != '')
                         <li><div class="dayCircle open"><p>W</p></div></li>
-                         @elseif ($day->dayname  == 'Thursday')
+                         @elseif ($deal->dayID  == '4' && $deal->dealname != '')
                         <li><div class="dayCircle open"><p>Th</p></div></li>
-                         @elseif ($day->dayname  == 'Friday')
+                         @elseif ($deal->dayID  == '5' && $deal->dealname != '')
                         <li><div class="dayCircle open"><p>F</p></div></li>
-                        @elseif ($day->dayname  == 'Saturday')
+                        @elseif ($deal->dayID  == '6' && $deal->dealname != '')
                         <li><div class="dayCircle open"><p>Sa</p></div></li>
-                        @elseif ($day->dayname  == 'Sunday')
+                        @elseif ($deal->dayID  == '7' && $deal->dealname != '')
                         <li><div class="dayCircle open"><p>Su</p></div></li>
                       @endif
                   @endforeach 
