@@ -23,9 +23,8 @@ Route::get('/about', function()
 	
 });
 
-// Route::post('/login', 'AuthController@login');
+Route::get('/alldeals', 'ArticlesController@showall');
 
-// Route::post('/login', 'AuthController@login');
 
 Route::controllers([
     'auth' => '\App\Http\Controllers\Auth\AuthController',
@@ -33,40 +32,6 @@ Route::controllers([
 ]);
 
 Route::get('/auth/register', ['middleware' => 'auth', 'uses' => 'AuthController@getRegister']);
-// Option to 
-
-// Route::bind('articles', function($id)
-// {
-
-// 	return \App\Article::where('id', $id)->first();
-
-// });
-
-
-
-// Route::get('/articles/create', 'ArticlesController@create');
-
-
-// SHOWS A SPECIFIC RECORD. IE: CLICK ON A LINK AND GO TO THAT SPECIFIC THING.
-// Route::get('/articles/{article}', 'ArticlesController@show');
-
-// Route::get('/articles/{article}/edit', 'ArticlesController@edit');
-
-// Route::patch('articles/{article}', 'ArticlesController@update');
-
-
-// OLD NON BINDING WAY
-// Route::get('/articles', 'ArticlesController@index');
-
-// Route::get('/articles/{id}', 'ArticlesController@show');
-
-// Route::get('/articles/{id}/edit', 'ArticlesController@edit');
-
-// Route::patch('articles/{id}', 'ArticlesController@update');
-
-// Route::get('/articles/create', 'ArticlesController@create');
-
-// Route::post('articles', 'ArticlesController@store');
 
 function photo_path()
 {
