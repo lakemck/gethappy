@@ -26,7 +26,7 @@ class ArticlesController extends Controller
         $this->article = $article;
 
         // ONLY SHOW CREATE AND EDIT PAGES IF LOGGED IN.
-        $this->middleware('auth', ['except' => 'index' ]);
+        $this->middleware('auth', ['except' => 'index', 'except' => 'showall' ]);
     }
 
 
