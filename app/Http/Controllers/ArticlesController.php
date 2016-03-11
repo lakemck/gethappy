@@ -197,6 +197,13 @@ public function index(Request $request)
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+     
+    public function showall(Request $request)
+    {
+        $articles = Article::simplePaginate(6);
+        return view('alldeals', compact('articles'));
+    }
+    
     public function edit($id)
     {
         $article = Article::find($id);
