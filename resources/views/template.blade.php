@@ -61,6 +61,7 @@
           <ul>
             <li class="active"><a href="{{URL::to('/')}}">HOME</a></li>
             <li><a href="{{URL::to('/about')}}">ABOUT</a></li>
+            <li><a href="{{URL::to('/alldeals')}}">ALL DEALS</a></li>
           </ul>  
         </div>
          <div class="socialMedia">
