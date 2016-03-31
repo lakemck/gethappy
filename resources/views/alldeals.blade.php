@@ -4,26 +4,30 @@
 @stop
 @section('content')
 
-<section class="container showAllPage">
+<section class="showAllPage">
 
+<div class="showAllWrapper">
 
-
+@if ($articles->count())
 @foreach ($articles as $article)
-	<article class="row col-md-4">
-	    
-	  	<h3 class="showAllTitle">{{$article->title}}</h3>
-	  	<div class="showAllImage">
+@if($article->title != '')
+  <article class="showAllDeals">
+    
+      <h3 class="showAllTitle">{{$article->title}}</h3>
+      <div class="showAllImage">
 @if ($article->image != '')          
         {!! HTML::image('images/'.$article->image, $article->image) !!}  
 @else 
-        <img src="{{URL::to('images/gd.jpg')}}" alt="">  
+        <img src="{{URL::to('images/gd.jpg')}}" alt="{{$article->title}}">  
 @endif
-	  	</div>
-	  	<div class="showAllDeal">
-	  		<h4>{{$article->deal}}<h4>
-	  	</div>
-		<div class="showAllDescription">
-			<p>{{$article->description}}</p>
+      </div>
+      <div class="showAllDeal">
+        <h4>{{$article->deal}}<h4>
+      </div>
+    <div class="showAllDescription">
+                  <div class="descriptionTextWys">    
+                    {!! $article->description !!}
+                  </div>
        <div class="deetsContainer">
              <div class="otherInfoContainer">
               <ul class="otherInfoIcons">
@@ -41,10 +45,13 @@
             </div>
 
           </div>  
-		</div>
+    </div>
 
-	</article>
+  </article>
+@endif 
 @endforeach
+@endif
+   </div>
 {!! $articles->render() !!}
 </section> 
 

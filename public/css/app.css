@@ -5978,13 +5978,22 @@ html, body{
   min-height: 100%;
   height: 100%;
   padding-top: 100px;
-  width: 80%;
-  position: relative; }
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+   }
   .showAllPage p {
     color: white; }
     .showAllPage p span {
       color: #F1C40F;
       font-weight: 700; }
+
+.showAllDeals{
+max-width: 100%;
+    width: 400px;
+    margin: 5px;
+
+}  
 
 .showAllTitle {
   font-weight: 700;
@@ -5996,24 +6005,35 @@ html, body{
   height: 200px;
   overflow: hidden; }
   .showAllImage img {
-    width: 100%; }
+    width: 100%;
+    min-height: 200px;
+    overflow: hidden;}
 
 .showAllDeal {
   font-weight: 700;
   color: #3398DA;
   text-align: center;
   background-color: #F1C40F;
-  padding: 5px; }
+  padding: 10px; }
   .showAllDeal h4 {
-    margin: 0; }
+    margin: 0;
+  text-transform: uppercase; }
 
 .showAllDescription {
-  width: 80%;
+/*width: 80%;*/  
   padding-left: 10px;
-  padding-top: 10px;
-  min-height: 250px; }
+  padding-top: 10px; }
   .showAllDescription p {
     color: black; }
+
+.showAllWrapper{
+
+  width: 100%;
+  max-width: 95%;
+  margin: 0 auto;
+
+}
+
 
 .pager {
   position: fixed;

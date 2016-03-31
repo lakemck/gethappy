@@ -114,7 +114,7 @@
 <div class="form-group">
     {!! Form::label('rating','RATING') !!}
     <p><i class="fa fa-star"></i>3 stars is great deal. 2 stars ok. 1 star is no deal at all.</p>
-        {!! Form::select('rating', ['1' => '1', '2' => '2', '3' => '3'], null, ['class' => 'form-control', 'size' => '3']) !!} 
+        {!! Form::select('rating', ['1' => '1', '2' => '2', '3' => '3', '4' => '4', '5' => '5'], null, ['class' => 'form-control', 'size' => '3']) !!} 
       
 </div>
 
@@ -145,7 +145,8 @@
 <script type="text/javascript">
   $('select').select2();
 </script>
-
+<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+<script>tinymce.init({ selector:'textarea', entity_encoding : "raw", element_format : 'html' });</script>
 @endsection
 
 @include ('errors.list')

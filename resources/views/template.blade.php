@@ -6,9 +6,10 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Get Happy | Cheap eats and happy hour</title>
-        <meta name="description" content="Find cheap eats, happy hours, plus great things to do near you in Auckland and Wellington.">
-        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+        <title>Get Happy | Cheap eats and happy hours</title>
+        <meta name="description" content="Find cheap food, happy hours, plus great things to do near you in Auckland and Wellington.">
+        <meta name="keywords" content="241, beer, dinner, lunch, deals, wine, cocktails">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
         <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
         <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
@@ -33,10 +34,17 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
         <link href="{{URL::to('css/app.css')}}" rel="stylesheet" media="screen, projection">
-        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-  <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
-  <script>tinymce.init({ selector:'textarea', entity_encoding : "raw", element_format : 'html' });</script>
+        <!-- <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script> -->
+  
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+          ga('create', 'UA-73224940-1', 'auto');
+          ga('send', 'pageview');
+        </script>
 @yield('styles')
     </head>
     <body>
@@ -47,7 +55,7 @@
 <!--       <div class="container"> -->
          <a class="navbar-brand" href="{{URL::to('/')}}">
             <span class="headerImage">
-                <img src="{{URL::to('images/happyfacetinyblue.png')}}" class="logoImage" alt="happy hour">
+                <img src="{{URL::to('images/happyfacetinyblue.jpg')}}" class="logoImage" alt="happy hour">
             </span>
          </a>
         <div class="navButton">
@@ -82,24 +90,19 @@
 
     @yield('content')
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/jquery.mixitup/2.1.11/jquery.mixitup.min.js"></script>
 <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyBWBBPv_XC5CpL6F7mfyLTMFfs9dj1cfYQ&signed_in=true&libraries=places"></script>
 {!! HTML::script('js/infobubble.js'); !!}
 <script src="{{URL::to('js/jquery.nicescroll.min.js')}}"></script>
+<script src="{{URL::to('js/fastclick.min.js')}}"></script>
+
+<script src="{{URL::to('js/imagesloaded.pkgd.min.js')}}"></script>
+<script src="{{URL::to('js/masonry.min.js')}}"></script>
 <script src="{{URL::to('js/select2.js')}}"></script>
 <script type="text/javascript" src="{{ URL::asset('js/main.js') }}"></script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-73224940-1', 'auto');
-  ga('send', 'pageview');
-</script>
     @yield('footer')
 </body>
 </html>

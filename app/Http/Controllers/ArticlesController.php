@@ -26,7 +26,7 @@ class ArticlesController extends Controller
         $this->article = $article;
 
         // ONLY SHOW CREATE AND EDIT PAGES IF LOGGED IN.
-        $this->middleware('auth', ['except' => 'index', 'except' => 'showall' ]);
+        $this->middleware('auth', ['except' => ['index', 'showall' ]]);
     }
 
 
@@ -200,7 +200,7 @@ public function index(Request $request)
      
     public function showall(Request $request)
     {
-        $articles = Article::simplePaginate(6);
+        $articles = Article::simplePaginate(12);
         return view('alldeals', compact('articles'));
     }
     

@@ -28,7 +28,7 @@ $('#categoryList2 option').each(function() {
     if(this.selected) {
         $(".placeHolderText").eq(0).hide();
     }else{
-        $(".placeHolderText").eq(0).text('day');
+        $(".placeHolderText").eq(0).text('category');
     }
 });
 
@@ -55,6 +55,17 @@ $('#sortContainer').mixItUp({
     }
 });
 
+var $grid = $('.showAllWrapper').imagesLoaded( function() {
+  // init Masonry after all images have loaded
+  $grid.masonry({
+  itemSelector: '.showAllDeals',
+  // use element for option
+  // columnWidth: 400,
+  
+  fitWidth: true
+  // percentPosition: true
+  });
+});
 });
 
 
@@ -212,8 +223,15 @@ $(document).ready(
 
   }
 
+
+
+
 );
 
+
+$(function() {
+    FastClick.attach(document.body);
+}); 
 // $('#submitButton').hover(function(){
 
 // (function pulse(){

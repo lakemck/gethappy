@@ -29,9 +29,10 @@
       {!! Form::hidden('lng', null, ['id' => 'lng'])!!}
 
       {!! Form::select('categoryList[]', $categories, null, ['class' => 'categorySelector', 'id' => 'categoryList2', 'multiple']) !!}
-    {!! $errors->first('category','<p class="error">:message</p>')!!}
-        {!! Form::select('dayList[]', $days, null, ['class' => 'distanceSelector', 'id' => 'dayList2', 'multiple']) !!}
-      {!! $errors->first('day','<p class="error">:message</p>')!!}
+        {!! $errors->first('category','<p class="error">:message</p>')!!}
+
+      {!! Form::select('dayList[]', $days, null, ['class' => 'distanceSelector', 'id' => 'dayList2', 'multiple']) !!}
+          {!! $errors->first('day','<p class="error">:message</p>')!!}
       
     {!! Form::submit('MAKE ME HAPPY', array('id' => 'submitButton', 'class' => 'refineSearchSubmit')) !!}
   
@@ -92,6 +93,10 @@
                           <p><i class='fa fa-star'></i><i class='fa fa-star'></i></p>
                           @elseif($article->rating == '3')
                           <p><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i></p>
+                          @elseif($article->rating == '4')
+                          <p><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i></p>
+                          @elseif($article->rating == '5')
+                          <p><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i></p>
                         @endif
                       @if (count($chosenDay) < 2 ) 
                         @foreach($article->deals as $deal)
@@ -113,7 +118,7 @@
               </div>
               <div class="daytypeContainer">
 
-                <ul id="dayIcons">
+<!--                 <ul id="dayIcons">
                   @foreach ($article->deals as $deal)
                       @if($deal->dayID == '1' && $deal->dealname != '')
                         <li><div class="dayCircle open"><p>M</p></div></li>
@@ -131,7 +136,7 @@
                         <li><div class="dayCircle open"><p>Su</p></div></li>
                       @endif
                   @endforeach 
-                </ul>
+                </ul> -->
         
                 <ul id="categoryIcons">
                   @foreach ($article->categories as $category)
@@ -403,13 +408,11 @@ function getInfoWindowDetails(location){
 
   $('#categoryList2').select2({
     placeholder: "CATEGORY",
-  minimumResultsForSearch: Infinity,
   formatSelectionCssClass: function (data, container) { return "myCssClass"; },
 
   });
   $('#dayList2').select2({
     placeholder: "DAY",
-    minimumResultsForSearch: Infinity,
   formatSelectionCssClass: function (data, container) { return "myCssClass"; },
   });
 

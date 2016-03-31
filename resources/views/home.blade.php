@@ -6,7 +6,7 @@
   <div class="row logo">      
       <div class="mainLogoImage">
   
-        <img src="{{URL::to('images/happyfacesmallblue.png')}}" alt="Happy Hour Auckland">  
+        <img src="{{URL::to('images/happyfacesmallblue.jpg')}}" alt="Happy Hour Auckland">  
 
       </div>
 
